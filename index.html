@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto Web Batch - Tu Primer Proyecto Real</title>
+    <meta name="description" content="Convierte el trimestre en tu primer proyecto real. Crea una web pública, diseña un juego en Batch y lanza una herramienta de mantenimiento.">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">Reto Web Batch</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link active">Inicio</a></li>
+                        <li><a href="about.html" class="nav-link">El reto</a></li>
+                        <li><a href="service.html" class="nav-link">La web</a></li>
+                        <li><a href="contact.html" class="nav-link">Contacto</a></li>
+                    </ul>
+                </nav>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Carousel -->
+    <section class="hero">
+        <div class="carousel-container">
+            <div class="carousel-slide active" data-slide="0">
+                <div class="carousel-content">
+                    <h1 class="carousel-title">Convierte el trimestre en tu primer proyecto real</h1>
+                    <p class="carousel-text">Crea una web pública, diseña un juego en Batch y lanza una herramienta de mantenimiento. Todo en un solo proyecto que podrás enseñar en tu currículum.</p>
+                    <a href="about.html" class="btn btn-primary btn-lg">Qué es el Reto Web Batch</a>
+                </div>
+            </div>
+            <div class="carousel-slide" data-slide="1">
+                <div class="carousel-content">
+                    <h1 class="carousel-title">Aprende Batch jugando y creando algo útil</h1>
+                    <p class="carousel-text">Nada de teoría eterna. Vas a aprender comandos Batch mientras diseñas un programa que limpia y cuida el PC, y un juego sencillo pero resultón.</p>
+                    <a href="backlog.html" class="btn btn-primary btn-lg">Ver lo que incluye</a>
+                </div>
+            </div>
+            <div class="carousel-slide" data-slide="2">
+                <div class="carousel-content">
+                    <h1 class="carousel-title">Trabaja con Scrum como un equipo profesional</h1>
+                    <p class="carousel-text">Roles claros, backlog, sprints y entregas. El profesor hace de Scrum Master, tú formas parte del equipo de desarrollo. Aprendes técnica y también cómo se trabaja en una empresa real.</p>
+                    <a href="roles.html" class="btn btn-primary btn-lg">Cómo lo vamos a hacer</a>
+                </div>
+            </div>
+            <div class="carousel-dots">
+                <button class="dot active" data-slide="0" aria-label="Slide 1"></button>
+                <button class="dot" data-slide="1" aria-label="Slide 2"></button>
+                <button class="dot" data-slide="2" aria-label="Slide 3"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="section welcome-section">
+        <div class="container">
+            <div class="two-column">
+                <div class="column">
+                    <h2 class="section-title">Bienvenido al Reto Web Batch</h2>
+                    <p class="lead">Este 2º trimestre no vas a hacer "fichas": vas a lanzar tu primera web.</p>
+                    <p class="section-text">
+                        El objetivo es simple y potente: Crear una página pública sobre archivos Batch donde cualquier persona pueda:
+                    </p>
+                    <ul class="feature-list">
+                        <li>Entender rápido qué es un sistema operativo y de dónde viene MS-DOS</li>
+                        <li>Seguir un mini-curso de Batch con ejemplos claros y descargables</li>
+                        <li>Bajarse un programa de mantenimiento del PC hecho por vosotros</li>
+                        <li>Jugar a un pequeño juego en Batch diseñado por el equipo</li>
+                    </ul>
+                    <p class="section-text">
+                        Todo ello contado con una web con buen diseño, textos pensados y un reto final para que quien nos visite pueda llevarse incluso un certificado.
+                    </p>
+                    <a href="about.html" class="btn btn-primary">Descubre el proyecto completo</a>
+                </div>
+                <div class="column">
+                    <div class="image-placeholder welcome-image">
+                        <span>Imagen de Bienvenida</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Includes Section -->
+    <section class="section project-includes-section">
+        <div class="container">
+            <h2 class="section-title centered">Lo que incluye este proyecto</h2>
+            <div class="three-column">
+                <div class="card">
+                    <div class="card-image">
+                        <div class="image-placeholder small">
+                            <span>Sistemas Operativos</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Historia y contexto de los Sistemas Operativos</h3>
+                        <p class="card-text">Una parte de la web dedicada a contar, de forma sencilla y visual, cómo hemos pasado de los primeros sistemas a MS-DOS y por qué tiene sentido hablar de archivos Batch hoy.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <div class="image-placeholder small">
+                            <span>Mini-curso Batch</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Mini-curso "Aprende Batch"</h3>
+                        <p class="card-text">Un recorrido corto pero intenso donde enseñaremos, con vuestro propio estilo, los comandos esenciales, trucos prácticos y ejemplos que cualquiera puede copiar, probar y adaptar.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <div class="image-placeholder small">
+                            <span>Descargas y Juego</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Descargas, juego y reto con certificado</h3>
+                        <p class="card-text">Zona "premium" de la web: un programa de mantenimiento del PC en Batch, un juego sencillo pero adictivo y un reto final. Quien lo supere podrá conseguir un certificado personalizado.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-cta">
+                <a href="service.html" class="btn btn-primary">Ver detalles de las secciones</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem/Solution Section -->
+    <section class="section problem-solution-section">
+        <div class="container">
+            <div class="two-column">
+                <div class="column">
+                    <div class="image-placeholder">
+                        <span>Problema vs Solución</span>
+                    </div>
+                </div>
+                <div class="column">
+                    <h2 class="section-title">¿Cansado de teoría sin ver resultados?</h2>
+                    <p class="section-text">
+                        El problema de muchas asignaturas técnicas es siempre el mismo: mucha explicación, pocas cosas reales que puedas enseñar fuera de clase.
+                    </p>
+                    <div class="solution-points">
+                        <div class="solution-point">
+                            <h4 class="solution-title">Producto real:</h4>
+                            <p class="solution-description">una web pública con dominio, no un ejercicio que se queda en la carpeta.</p>
+                        </div>
+                        <div class="solution-point">
+                            <h4 class="solution-title">Trabajo en equipo:</h4>
+                            <p class="solution-description">roles definidos, organización por tareas y sprints.</p>
+                        </div>
+                        <div class="solution-point">
+                            <h4 class="solution-title">Resultado visible:</h4>
+                            <p class="solution-description">un sitio que cualquiera puede visitar, usar y recomendar.</p>
+                        </div>
+                    </div>
+                    <p class="section-text">
+                        Empezaremos el trimestre presentando el objetivo, creando el backlog del proyecto y repartiendo roles Scrum. A partir de ahí, cada sprint tendrá un avance claro: contenidos, diseño, scripts, juego y reto final.
+                    </p>
+                    <a href="backlog.html" class="btn btn-primary">Así arrancaremos el primer sprint</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why This Project Section -->
+    <section class="section why-section">
+        <div class="container">
+            <div class="two-column">
+                <div class="column">
+                    <h2 class="section-title">¿Por qué este proyecto te interesa?</h2>
+                    <p class="lead">Porque no es solo aprender Batch: es vivir un proyecto de principio a fin, como se trabaja en muchas empresas tecnológicas. Sales del trimestre con algo que puedes enseñar y que dice mucho de ti.</p>
+                    <div class="image-placeholder small">
+                        <span>Satisfacción</span>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="3">0</div>
+                            <div class="stat-unit">MESES</div>
+                            <div class="stat-description">DE PROYECTO REAL</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="1">0</div>
+                            <div class="stat-unit">WEB ONLINE</div>
+                            <div class="stat-description">PARA TU PORTFOLIO</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="10">0</div>
+                            <div class="stat-unit">COMPAÑEROS</div>
+                            <div class="stat-description">EN EL MISMO EQUIPO</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="100">0</div>
+                            <div class="stat-unit">%</div>
+                            <div class="stat-description">APRENDIZAJE PRÁCTICO Y APLICADO</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials-section">
+        <div class="container">
+            <h2 class="section-title centered">Lo que podría decir tu "yo" del final de trimestre</h2>
+            <div class="testimonials-carousel">
+                <div class="testimonial-slide active" data-slide="0">
+                    <div class="testimonial-card">
+                        <blockquote class="testimonial-quote">
+                            "Es la primera vez que siento que un trabajo de clase podría enseñárlo tal cual en una entrevista. No fue fácil, pero tener la web online merece la pena."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <div class="image-placeholder avatar">
+                                    <span>Estudiante</span>
+                                </div>
+                            </div>
+                            <div class="author-info">
+                                <div class="author-name">Estudiante de Sistemas</div>
+                                <div class="author-context">2º Trimestre</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide" data-slide="1">
+                    <div class="testimonial-card">
+                        <blockquote class="testimonial-quote">
+                            "Al principio no tenía ni idea de Batch ni de Scrum. Al final del proyecto sé hacer scripts, entiendo mejor cómo funciona un sistema operativo y he trabajado como un equipo de verdad."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <div class="image-placeholder avatar">
+                                    <span>Alumno</span>
+                                </div>
+                            </div>
+                            <div class="author-info">
+                                <div class="author-name">Alumno participante</div>
+                                <div class="author-context">Reto Web Batch</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide" data-slide="2">
+                    <div class="testimonial-card">
+                        <blockquote class="testimonial-quote">
+                            "Lo mejor fue ver que otra gente entraba a la web, probaba el juego y descargaba el programa. Dejar de hacer cosas que solo ve el profe cambia totalmente la motivación."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <div class="image-placeholder avatar">
+                                    <span>Equipo</span>
+                                </div>
+                            </div>
+                            <div class="author-info">
+                                <div class="author-name">Integrante del equipo</div>
+                                <div class="author-context">Proyecto en producción</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-dots">
+                <button class="dot active" data-slide="0" aria-label="Testimonial 1"></button>
+                <button class="dot" data-slide="1" aria-label="Testimonial 2"></button>
+                <button class="dot" data-slide="2" aria-label="Testimonial 3"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <span class="logo-text">Reto Web Batch</span>
+                    </div>
+                    <p class="footer-description">
+                        Tu primer proyecto real del trimestre. Crea, aprende y construye algo que puedas mostrar al mundo.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook" class="social-link">Facebook</a>
+                        <a href="#" aria-label="Twitter" class="social-link">Twitter</a>
+                        <a href="#" aria-label="LinkedIn" class="social-link">LinkedIn</a>
+                        <a href="#" aria-label="Instagram" class="social-link">Instagram</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Enlaces rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio del proyecto</a></li>
+                        <li><a href="about.html">Qué es el Reto Web Batch</a></li>
+                        <li><a href="service.html">Secciones de la web</a></li>
+                        <li><a href="service.html">Juego y descargas</a></li>
+                        <li><a href="contact.html">Contacto / dudas</a></li>
+                        <li><a href="backlog.html">Backlog del proyecto</a></li>
+                        <li><a href="roles.html">Roles del equipo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Sobre el proyecto</h3>
+                    <ul class="footer-links">
+                        <li><a href="service.html">Web sobre Batch</a></li>
+                        <li><a href="https://progresse.es/">Historia de los sistemas operativos</a></li>
+                        <li><a href="https://progresse.es/">Programa de mantenimiento</a></li>
+                        <li><a href="https://progresse.es/">Juego en Batch</a></li>
+                        <li><a href="#">Reto y certificado</a></li>
+                        <li><a href="backlog.html">MUST del proyecto</a></li>
+                        <li><a href="backlog.html">SHOULD (mejoras)</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Contacto</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://progresse.es/">Profesor responsable</a></li>
+                        <li><a href="#">Centro educativo</a></li>
+                        <li><a href="#">Aula virtual</a></li>
+                        <li><a href="contact.html">Horario de dudas</a></li>
+                        <li><a href="contact.html">Preguntas frecuentes</a></li>
+                        <li><a href="contact.html">Entregas y plazos</a></li>
+                        <li><a href="https://progresse.es/">Recursos técnicos</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Reto Web Batch. Proyecto educativo del 2º trimestre.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

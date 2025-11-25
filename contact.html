@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Reto Web Batch</title>
+     <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">Reto Web Batch</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Inicio</a></li>
+                        <li><a href="about.html" class="nav-link">El reto</a></li>
+                        <li><a href="service.html" class="nav-link">La web</a></li>
+                        <li><a href="contact.html" class="nav-link active">Contacto</a></li>
+                    </ul>
+                </nav>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="section" style="margin-top: 80px; padding: 96px 0; background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%); color: white;">
+        <div class="container">
+            <div style="text-align: center;">
+                <h1 style="color: white;">Contacto y Dudas</h1>
+                <p class="lead" style="color: rgba(255, 255, 255, 0.9);">¿Tienes preguntas sobre el proyecto? Estamos aquí para ayudarte</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form and Info -->
+    <section class="section">
+        <div class="container">
+            <div class="two-column">
+                <div class="column">
+                    <h2>Envíanos tu consulta</h2>
+                    <p class="section-text">
+                        Si tienes cualquier duda sobre el proyecto, necesitas más información o quieres resolver algún problema, utiliza este formulario para contactarnos.
+                    </p>
+                    
+                    <form class="contact-form" style="margin-top: 32px;">
+                        <div style="margin-bottom: 24px;">
+                            <label for="name" style="display: block; margin-bottom: 8px; font-weight: 500;">Nombre completo *</label>
+                            <input type="text" id="name" name="name" required style="width: 100%; padding: 12px 16px; border: 1px solid #E5E7EB; border-radius: 8px; font-size: 16px; background: white;">
+                            <div class="error" style="color: #EF4444; font-size: 14px; margin-top: 4px;"></div>
+                        </div>
+                        
+                        <div style="margin-bottom: 24px;">
+                            <label for="email" style="display: block; margin-bottom: 8px; font-weight: 500;">Email *</label>
+                            <input type="email" id="email" name="email" required style="width: 100%; padding: 12px 16px; border: 1px solid #E5E7EB; border-radius: 8px; font-size: 16px; background: white;">
+                            <div class="error" style="color: #EF4444; font-size: 14px; margin-top: 4px;"></div>
+                        </div>
+                        
+                        <div style="margin-bottom: 24px;">
+                            <label for="subject" style="display: block; margin-bottom: 8px; font-weight: 500;">Asunto *</label>
+                            <select id="subject" name="subject" required style="width: 100%; padding: 12px 16px; border: 1px solid #E5E7EB; border-radius: 8px; font-size: 16px; background: white;">
+                                <option value="">Selecciona un tema</option>
+                                <option value="proyecto">Información sobre el proyecto</option>
+                                <option value="roles">Roles y responsabilidades</option>
+                                <option value="tecnico">Dudas técnicas</option>
+                                <option value="planning">Cronograma y planificación</option>
+                                <option value="evaluacion">Evaluación y rúbrica</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                            <div class="error" style="color: #EF4444; font-size: 14px; margin-top: 4px;"></div>
+                        </div>
+                        
+                        <div style="margin-bottom: 24px;">
+                            <label for="message" style="display: block; margin-bottom: 8px; font-weight: 500;">Mensaje *</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Describe tu duda o consulta con el mayor detalle posible..." style="width: 100%; padding: 12px 16px; border: 1px solid #E5E7EB; border-radius: 8px; font-size: 16px; background: white; resize: vertical; font-family: inherit;"></textarea>
+                            <div class="error" style="color: #EF4444; font-size: 14px; margin-top: 4px;"></div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Enviar consulta</button>
+                    </form>
+                </div>
+                
+                <div class="column">
+                    <h2>Información de contacto</h2>
+                    <div class="card" style="margin-bottom: 24px;">
+                        <h3 class="card-title">Profesor Responsable</h3>
+                        <p class="card-text">
+                            <strong>Nombre:</strong> [Nombre del profesor]<br>
+                            <strong>Email:</strong> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4f3f3d20292a3c203d0f2c2a213b3d20612a2b3a">[email&#160;protected]</a><br>
+                            <strong>Despacho:</strong> Sala de Profesores, Planta 2
+                        </p>
+                    </div>
+                    
+                    <div class="card" style="margin-bottom: 24px;">
+                        <h3 class="card-title">Horario de Dudas</h3>
+                        <p class="card-text">
+                            <strong>Lunes a Viernes:</strong> 10:00 - 11:00<br>
+                            <strong>Miércoles:</strong> 16:00 - 17:00<br>
+                            <strong>Ubicación:</strong> Aula de informática
+                        </p>
+                    </div>
+                    
+                    <div class="card" style="margin-bottom: 24px;">
+                        <h3 class="card-title">Centro Educativo</h3>
+                        <p class="card-text">
+                            <strong>Nombre:</strong> [Nombre del centro]<br>
+                            <strong>Dirección:</strong> [Dirección completa]<br>
+                            <strong>Teléfono:</strong> [Número de contacto]
+                        </p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 class="card-title">Aula Virtual</h3>
+                        <p class="card-text">
+                            Accede a materiales adicionales, foros de discusión y recursos del proyecto a través de nuestra plataforma de aprendizaje online.
+                        </p>
+                        <a href="#" class="btn btn-primary" style="margin-top: 16px;">Ir al aula virtual</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" style="background-color: #FFFFFF;">
+        <div class="container">
+            <h2 class="section-title centered">Preguntas Frecuentes</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item" style="margin-bottom: 24px; border: 1px solid #E5E7EB; border-radius: 16px; overflow: hidden;">
+                    <button class="faq-question" style="width: 100%; padding: 24px; text-align: left; background: #FFFFFF; border: none; font-size: 18px; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center;" onclick="toggleFAQ(this)">
+                        ¿Necesito experiencia previa en programación?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer" style="display: none; padding: 0 24px 24px; background: #F8F9FA;">
+                        <p>No es necesario tener experiencia previa. El proyecto está diseñado para que estudiantes con diferentes niveles puedan participar y aprender. La metodología Scrum y el acompañamiento del profesor garantizarán que todos puedan contribuir al proyecto.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" style="margin-bottom: 24px; border: 1px solid #E5E7EB; border-radius: 16px; overflow: hidden;">
+                    <button class="faq-question" style="width: 100%; padding: 24px; text-align: left; background: #FFFFFF; border: none; font-size: 18px; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center;" onclick="toggleFAQ(this)">
+                        ¿Cómo se evalúa el proyecto?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer" style="display: none; padding: 0 24px 24px; background: #F8F9FA;">
+                        <p>La evaluación incluye múltiples criterios: calidad del código, funcionalidad de la web, trabajo en equipo, presentación final y documentación. Se utilizará una rúbrica detallada que se publicará al inicio del proyecto.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" style="margin-bottom: 24px; border: 1px solid #E5E7EB; border-radius: 16px; overflow: hidden;">
+                    <button class="faq-question" style="width: 100%; padding: 24px; text-align: left; background: #FFFFFF; border: none; font-size: 18px; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center;" onclick="toggleFAQ(this)">
+                        ¿Qué pasa si no puedo asistir a una reunión de equipo?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer" style="display: none; padding: 0 24px 24px; background: #F8F9FA;">
+                        <p>Es importante la participación activa, pero entendemos que pueden surgir imprevistos. Comunícalo al Scrum Master y al equipo con antelación. Searánn soluciones como reuniones asíncronas o asignación de tareas alternativas.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" style="margin-bottom: 24px; border: 1px solid #E5E7EB; border-radius: 16px; overflow: hidden;">
+                    <button class="faq-question" style="width: 100%; padding: 24px; text-align: left; background: #FFFFFF; border: none; font-size: 18px; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center;" onclick="toggleFAQ(this)">
+                        ¿Se puede usar tecnología diferente a la especificada?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer" style="display: none; padding: 0 24px 24px; background: #F8F9FA;">
+                        <p>El proyecto está estructurado alrededor de Batch y la creación de una web estática/dinámica específica. Sin embargo, si tienes ideas para mejorar el proyecto con otras tecnologías, discútelo con el equipo y el profesor durante las primeras semanas.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" style="margin-bottom: 24px; border: 1px solid #E5E7EB; border-radius: 16px; overflow: hidden;">
+                    <button class="faq-question" style="width: 100%; padding: 24px; text-align: left; background: #FFFFFF; border: none; font-size: 18px; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center;" onclick="toggleFAQ(this)">
+                        ¿Cómo se reparte el trabajo en el equipo?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer" style="display: none; padding: 0 24px 24px; background: #F8F9FA;">
+                        <p>El reparto se hace en base a los roles Scrum y las habilidades de cada miembro. Habrá rotaciones para que todos experimenten diferentes responsabilidades. El Product Owner ayudará a priorizar tareas según las capacidades del equipo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calendar Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title centered">Fechas Importantes</h2>
+            <div class="three-column">
+                <div class="card">
+                    <h3 class="card-title">Inicio del Proyecto</h3>
+                    <p class="card-text">
+                        <strong>Semana 1</strong><br>
+                        Presentación del proyecto, formación de equipos y definición de roles Scrum.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Entregas Parciales</h3>
+                    <p class="card-text">
+                        <strong>Cada 2-3 semanas</strong><br>
+                        Revisión de progreso, demos y feedback del equipo y profesor.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Presentación Final</h3>
+                    <p class="card-text">
+                        <strong>Semana 12</strong><br>
+                        Presentación del proyecto completo, entrega de documentación y evaluación final.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <span class="logo-text">Reto Web Batch</span>
+                    </div>
+                    <p class="footer-description">
+                        Tu primer proyecto real del trimestre. Crea, aprende y construye algo que puedas mostrar al mundo.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook" class="social-link">Facebook</a>
+                        <a href="#" aria-label="Twitter" class="social-link">Twitter</a>
+                        <a href="#" aria-label="LinkedIn" class="social-link">LinkedIn</a>
+                        <a href="#" aria-label="Instagram" class="social-link">Instagram</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Enlaces rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio del proyecto</a></li>
+                        <li><a href="about.html">Qué es el Reto Web Batch</a></li>
+                        <li><a href="service.html">Secciones de la web</a></li>
+                        <li><a href="service.html">Juego y descargas</a></li>
+                        <li><a href="contact.html">Contacto / dudas</a></li>
+                        <li><a href="backlog.html">Backlog del proyecto</a></li>
+                        <li><a href="roles.html">Roles del equipo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Sobre el proyecto</h3>
+                    <ul class="footer-links">
+                        <li><a href="service.html">Web sobre Batch</a></li>
+                        <li><a href="https://progresse.es/">Historia de los sistemas operativos</a></li>
+                        <li><a href="https://progresse.es/">Programa de mantenimiento</a></li>
+                        <li><a href="https://progresse.es/">Juego en Batch</a></li>
+                        <li><a href="#">Reto y certificado</a></li>
+                        <li><a href="backlog.html">MUST del proyecto</a></li>
+                        <li><a href="backlog.html">SHOULD (mejoras)</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Contacto</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://progresse.es/">Profesor responsable</a></li>
+                        <li><a href="#">Centro educativo</a></li>
+                        <li><a href="#">Aula virtual</a></li>
+                        <li><a href="contact.html">Horario de dudas</a></li>
+                        <li><a href="contact.html">Preguntas frecuentes</a></li>
+                        <li><a href="contact.html">Entregas y plazos</a></li>
+                        <li><a href="https://progresse.es/">Recursos técnicos</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Reto Web Batch. Proyecto educativo del 2º trimestre.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="scripts/main.js"></script>
+    <script>
+        function toggleFAQ(button) {
+            const answer = button.nextElementSibling;
+            const icon = button.querySelector('.faq-icon');
+            
+            if (answer.style.display === 'none' || answer.style.display === '') {
+                answer.style.display = 'block';
+                icon.textContent = '−';
+            } else {
+                answer.style.display = 'none';
+                icon.textContent = '+';
+            }
+        }
+    </script>
+</body>
+</html>
