@@ -3,165 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resumen del Sistema Operativo</title>
-    <!-- Carga de Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Configuración de la fuente Inter para un aspecto moderno */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f7fafc; /* Fondo claro */
-        }
-        /* Estilos base para las tarjetas de función */
-        .function-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .function-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
-        .image-placeholder {
-            height: 12rem; /* Altura fija para el placeholder */
-            background-color: #f3f4f6;
-            border-style: dashed;
-            border-width: 2px;
-        }
-    </style>
+    <title>El Sistema Operativo y sus Funciones</title>
+    <link rel="stylesheet" href="/css/main.css"> 
 </head>
-<body class="p-4 md:p-8">
+<body>
+    <header>
+        <h1>Conceptos Fundamentales de un Sistema Operativo (SO)</h1>
+    </header>
 
-    <div class="max-w-5xl mx-auto">
-        
-        <!-- Encabezado Principal y Definición -->
-        <header class="bg-indigo-700 text-white p-6 rounded-t-2xl shadow-xl">
-            <h1 class="text-4xl font-extrabold mb-2">💻 Resumen de Sistemas Operativos (SO)</h1>
-            <p class="text-indigo-200 text-lg">El software esencial que administra tu hardware y tus aplicaciones.</p>
-        </header>
-        
-        <section class="bg-white p-6 md:p-8 rounded-b-2xl shadow-xl mb-10">
-            <h2 class="text-2xl font-bold text-indigo-800 mb-4 border-b pb-2">¿Qué es un Sistema Operativo?</h2>
-            <p class="text-gray-700 leading-relaxed">
-                Un **Sistema Operativo (SO)** es un conjunto de programas que permite la interacción entre los usuarios y los dispositivos electrónicos, gestionando los recursos de hardware y software para garantizar un funcionamiento óptimo del sistema. Actúa como el intermediario entre el hardware del dispositivo y las aplicaciones que utilizamos.
-            </p>
-
-            <h3 class="text-xl font-semibold text-indigo-600 mt-6 mb-3">Funciones principales del SO:</h3>
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 text-center">
-                <div class="p-3 bg-indigo-100 rounded-lg font-medium text-indigo-700">Gestión de Procesos</div>
-                <div class="p-3 bg-indigo-100 rounded-lg font-medium text-indigo-700">Gestión de Memoria</div>
-                <div class="p-3 bg-indigo-100 rounded-lg font-medium text-indigo-700">Gestión de Almacenamiento</div>
-                <div class="p-3 bg-indigo-100 rounded-lg font-medium text-indigo-700">Gestión de Dispositivos</div>
+    <main>
+        <section class="definicion-so">
+            <h2>¿Qué es un Sistema Operativo?</h2>
+            
+            <div class="caja-imagen principal">
+                <p> <a href="/img/Sistema_Operativos.png">Espacio para la Imagen Principal del SO.</p> </a>
             </div>
+
+            <p>Un Sistema Operativo (SO) es un conjunto de programas que permite la **interacción entre los usuarios y los dispositivos electrónicos**, gestionando los recursos de hardware y software para garantizar un funcionamiento óptimo del sistema. Es el software que actúa como **intermediario** entre el hardware del dispositivo y las aplicaciones que utilizamos.</p>
         </section>
 
-        <!-- Secciones de Gestión de Funciones -->
-        <main class="space-y-8">
+        <section class="funciones-principales">
+            <h2>Funciones Principales de un Sistema Operativo (SO)</h2>
+            <ul>
+                <li><strong>Gestión de Procesos:</strong> Controla la ejecución de programas y la asignación de recursos.</li>
+                <li><strong>Gestión de la Memoria:</strong> Optimiza la asignación de memoria a los procesos.</li>
+                <li><strong>Gestión de Almacenamiento:</strong> Controla los datos almacenados en discos duros u otros medios de almacenamiento.</li>
+                <li><strong>Gestión de Dispositivos:</strong> Controla y coordina el uso de los dispositivos conectados (impresoras, teclados, etc.).</li>
+            </ul>
+        </section>
+        
+        <article class="funcion-detalle" id="gestion-procesos">
+            <h3>📌 Gestión de Procesos</h3>
+            
+            <div class="caja-imagen ilustracion">
+                <p>Espacio para la Ilustración de Gestión de Procesos (CPU).</p>
+            </div>
+            
+            <h4>¿Qué es?</h4>
+            <p>La gestión de procesos es la función del sistema operativo que controla la **ejecución de programas** y la asignación de recursos a cada uno de ellos. Un «proceso» es simplemente un programa que está en ejecución...</p>
+            
+            <h4>¿Cómo funciona?</h4>
+            <p>Cada proceso necesita ciertos recursos para funcionar, como tiempo de CPU, memoria y acceso a dispositivos. La gestión de procesos asegura que cada proceso obtenga los recursos necesarios para ejecutarse **sin interferir** con otros procesos. Esto incluye funciones como:</p>
+            <ul>
+                <li><strong>Creación y finalización de procesos:</strong> Al iniciar un programa, el sistema crea un nuevo proceso. Cuando el programa termina, el proceso se elimina y sus recursos se liberan.</li>
+                <li><strong>Planificación de procesos:</strong> Los sistemas operativos deciden en qué momento y por cuánto tiempo cada proceso utilizará la CPU.</li>
+            </ul>
+            
+            <p class="ejemplo"><strong>Ejemplo:</strong> Piensa en un sistema operativo como el administrador de un edificio de oficinas...</p>
 
-            <!-- 1. Gestión de Procesos -->
-            <div class="function-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-red-500">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4 flex items-center">
-                    📌 Gestión de Procesos
-                    <span class="ml-3 text-red-500 text-4xl">⚙️</span>
-                </h2>
-                <!-- Contenedor responsivo para el contenido y el placeholder -->
-                <div class="md:grid md:grid-cols-3 md:gap-6 items-start">
-                    <!-- Contenido de Texto (2/3 del ancho en escritorio) -->
-                    <div class="md:col-span-2 space-y-4 text-gray-700">
-                        <p><strong>¿Qué es?</strong> Controla la ejecución de programas y la asignación de recursos a cada uno. Un "proceso" es un programa en ejecución.</p>
-                        <p><strong>¿Cómo funciona?</strong> Asigna tiempo de CPU, memoria y acceso a dispositivos. Incluye la creación, finalización y planificación de procesos para evitar interferencias.</p>
-                        <p class="bg-red-50 p-3 rounded-lg border-l-4 border-red-400">
-                            **Ejemplo:** Es como el administrador de un edificio de oficinas, organizando qué "oficina" (proceso) utiliza la "electricidad" (CPU) y el "espacio de almacenamiento" (memoria) en un momento dado.
-                        </p>
-                        <p><strong>Hardware relacionado:</strong> Procesador (CPU) y controlador de interrupciones.</p>
-                    </div>
-                    <!-- Placeholder de Imagen (1/3 del ancho en escritorio) -->
-                    <div class="md:col-span-1 mt-6 md:mt-0">
-                        <div class="image-placeholder border-red-400 rounded-lg flex items-center justify-center text-center text-gray-500 p-4">
-                            [ **Aquí puedes insertar un diagrama del ciclo de vida de un Proceso.** ]
-                        </div>
-                    </div>
-                </div>
+            <p class="hardware"><strong>Hardware relacionado:</strong> La gestión de procesos está muy relacionada con el **procesador (CPU)** y el controlador de interrupciones...</p>
+        </article>
+
+        <article class="funcion-detalle" id="gestion-memoria">
+            <h3>💾 Gestión de la Memoria</h3>
+
+            <div class="caja-imagen ilustracion">
+                <p>Espacio para la Ilustración de Gestión de Memoria (RAM).</p>
+            </div>
+            
+            <h4>¿Qué es?</h4>
+            <p>La gestión de la memoria optimiza el uso de la **memoria principal (RAM)** asignándola eficientemente entre los diferentes procesos en ejecución. La memoria es un recurso limitado y valioso...</p>
+            
+            <h4>¿Cómo funciona?</h4>
+            <p>Cuando ejecutas una aplicación, el sistema operativo asigna una parte de la memoria RAM para que pueda funcionar. La gestión de memoria:</p>
+            <ul>
+                <li><strong>Asigna espacio de memoria a cada proceso:</strong> Asegura que cada proceso tenga suficiente espacio para funcionar.</li>
+                <li><strong>Libera memoria cuando un proceso termina:</strong> Cuando cierras una aplicación, el sistema recupera esa memoria para otros procesos.</li>
+                <li><strong>Usa la memoria virtual:</strong> Si la RAM se llena, el sistema operativo puede usar una parte del disco duro como «memoria virtual»...</li>
+            </ul>
+            
+            <p class="ejemplo"><strong>Ejemplo:</strong> Imagina que la RAM es una mesa de trabajo en una biblioteca...</p>
+
+            <p class="hardware"><strong>Hardware relacionado:</strong> Este aspecto se relaciona principalmente con la **memoria RAM** y el controlador de memoria...</p>
+        </article>
+
+        <article class="funcion-detalle" id="gestion-almacenamiento">
+            <h3>📂 Gestión de Almacenamiento</h3>
+            
+            <div class="caja-imagen ilustracion">
+                <p>Espacio para la Ilustración de Gestión de Almacenamiento (HDD/SSD).</p>
+            </div>
+            
+            <h4>¿Qué es?</h4>
+            <p>La gestión de almacenamiento se refiere al control de datos almacenados en **discos duros, unidades SSD**, u otros dispositivos de almacenamiento. Este proceso organiza, almacena y recupera datos...</p>
+            
+            <h4>¿Cómo funciona?</h4>
+            <p>El sistema operativo organiza el almacenamiento en **archivos y carpetas** para facilitar el acceso. Funciones clave incluyen:</p>
+            <ul>
+                <li><strong>Estructura de archivos:</strong> Cada archivo se organiza de manera estructurada...</li>
+                <li><strong>Permisos y seguridad:</strong> Establece quién puede ver, editar o borrar un archivo.</li>
+                <li><strong>Almacenamiento en caché:</strong> Para mejorar la velocidad, el sistema operativo puede almacenar temporalmente datos que usas con frecuencia...</li>
+            </ul>
+            
+            <p class="ejemplo"><strong>Ejemplo:</strong> Imagina que el disco duro es un gran almacén y la gestión de almacenamiento es el encargado que organiza cada caja (archivo) en estantes...</p>
+
+            <p class="hardware"><strong>Hardware relacionado:</strong> La gestión de almacenamiento involucra dispositivos como el **disco duro (HDD)**, la **unidad de estado sólido (SSD)**, y controladores de almacenamiento.</p>
+        </article>
+
+        <article class="funcion-detalle" id="gestion-dispositivos">
+            <h3>⚙️ Gestión de Dispositivos</h3>
+            
+            <div class="caja-imagen ilustracion">
+                <p>Espacio para la Ilustración de Gestión de Dispositivos (Drivers).</p>
             </div>
 
-            <!-- 2. Gestión de la Memoria -->
-            <div class="function-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4 flex items-center">
-                    💾 Gestión de la Memoria
-                    <span class="ml-3 text-blue-500 text-4xl">🧠</span>
-                </h2>
-                <!-- Contenedor responsivo para el contenido y el placeholder -->
-                <div class="md:grid md:grid-cols-3 md:gap-6 items-start">
-                    <!-- Contenido de Texto (2/3 del ancho en escritorio) -->
-                    <div class="md:col-span-2 space-y-4 text-gray-700">
-                        <p><strong>¿Qué es?</strong> Optimiza el uso de la memoria principal (RAM) asignándola eficientemente entre los diferentes procesos en ejecución.</p>
-                        <p><strong>¿Cómo funciona?</strong> Asigna espacio de memoria a cada proceso, la libera al terminar el proceso y utiliza la **memoria virtual** (parte del disco duro) cuando la RAM es insuficiente.</p>
-                        <p class="bg-blue-50 p-3 rounded-lg border-l-4 border-blue-400">
-                            **Ejemplo:** Actúa como el bibliotecario que asigna un espacio de la "mesa de trabajo" (RAM) a cada persona para leer, y si es necesario, habilita una "zona de almacenamiento temporal" (memoria virtual).
-                        </p>
-                        <p><strong>Hardware relacionado:</strong> Memoria RAM, controlador de memoria, y disco duro/SSD (para memoria virtual).</p>
-                    </div>
-                    <!-- Placeholder de Imagen (1/3 del ancho en escritorio) -->
-                    <div class="md:col-span-1 mt-6 md:mt-0">
-                        <div class="image-placeholder border-blue-400 rounded-lg flex items-center justify-center text-center text-gray-500 p-4">
-                            [ **Aquí puedes insertar un diagrama de Asignación de Memoria o Memoria Virtual.** ]
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <h4>¿Qué es?</h4>
+            <p>La gestión de dispositivos controla y coordina el uso de **dispositivos periféricos** como impresoras, teclados, y ratones. Este componente del sistema operativo asegura que estos dispositivos funcionen correctamente...</p>
+            
+            <h4>¿Cómo funciona?</h4>
+            <p>El sistema operativo se comunica con los dispositivos mediante «controladores» (**drivers**), que son programas específicos para cada tipo de dispositivo. Esto permite:</p>
+            <ul>
+                <li><strong>Asignación de dispositivos:</strong> Asigna dispositivos a los procesos que los necesitan.</li>
+                <li><strong>Manejo de interrupciones:</strong> Cuando un dispositivo necesita la atención de la CPU...</li>
+            </ul>
+        </article>
+    </main>
 
-            <!-- 3. Gestión de Almacenamiento -->
-            <div class="function-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-green-500">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4 flex items-center">
-                    📂 Gestión de Almacenamiento
-                    <span class="ml-3 text-green-500 text-4xl">🗃️</span>
-                </h2>
-                <!-- Contenedor responsivo para el contenido y el placeholder -->
-                <div class="md:grid md:grid-cols-3 md:gap-6 items-start">
-                    <!-- Contenido de Texto (2/3 del ancho en escritorio) -->
-                    <div class="md:col-span-2 space-y-4 text-gray-700">
-                        <p><strong>¿Qué es?</strong> Controla los datos almacenados en discos duros, SSD u otros medios. Organiza, almacena y recupera los datos de forma permanente.</p>
-                        <p><strong>¿Cómo funciona?</strong> Organiza el almacenamiento en archivos y carpetas, establece permisos y seguridad, y utiliza el **almacenamiento en caché** para acelerar el acceso a datos frecuentes.</p>
-                        <p class="bg-green-50 p-3 rounded-lg border-l-4 border-green-400">
-                            **Ejemplo:** Es el encargado de un gran almacén (disco duro) que organiza cada "caja" (archivo) en "estantes" (carpetas) para asegurar que el acceso sea fácil y seguro.
-                        </p>
-                        <p><strong>Hardware relacionado:</strong> Disco Duro (HDD), Unidad de Estado Sólido (SSD) y controladores de almacenamiento.</p>
-                    </div>
-                    <!-- Placeholder de Imagen (1/3 del ancho en escritorio) -->
-                    <div class="md:col-span-1 mt-6 md:mt-0">
-                        <div class="image-placeholder border-green-400 rounded-lg flex items-center justify-center text-center text-gray-500 p-4">
-                            [ **Aquí puedes insertar una imagen de un Sistema de Archivos (FAT, NTFS, ext4).** ]
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 4. Gestión de Dispositivos (Fragmento) -->
-            <div class="function-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-yellow-500">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4 flex items-center">
-                    ⚙️ Gestión de Dispositivos
-                    <span class="ml-3 text-yellow-500 text-4xl">🖨️</span>
-                </h2>
-                <!-- Contenedor responsivo para el contenido y el placeholder -->
-                <div class="md:grid md:grid-cols-3 md:gap-6 items-start">
-                    <!-- Contenido de Texto (2/3 del ancho en escritorio) -->
-                    <div class="md:col-span-2 space-y-4 text-gray-700">
-                        <p><strong>¿Qué es?</strong> Controla y coordina el uso de dispositivos periféricos (impresoras, teclados, ratones). Asegura que funcionen y se comuniquen con el sistema.</p>
-                        <p><strong>¿Cómo funciona?</strong> El SO se comunica con el hardware a través de **controladores (drivers)**, programas específicos que: Asignan dispositivos a procesos y manejan las interrupciones del hardware.</p>
-                    </div>
-                    <!-- Placeholder de Imagen (1/3 del ancho en escritorio) -->
-                    <div class="md:col-span-1 mt-6 md:mt-0">
-                        <div class="image-placeholder border-yellow-400 rounded-lg flex items-center justify-center text-center text-gray-500 p-4">
-                            [ **Aquí puedes insertar un diagrama de la Jerarquía de Dispositivos e Interruptores.** ]
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </main>
-
-        <footer class="mt-10 pt-6 border-t text-center text-gray-500">
-            <p>Resumen Estructurado | Documento generador para facilitar el estudio de los Sistemas Operativos.</p>
-        </footer>
-    </div>
-
+    <footer>
+        <p>Documentación sobre Sistemas Operativos - Fuente: Contenido proporcionado por el usuario.</p>
+    </footer>
 </body>
 </html>

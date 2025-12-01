@@ -658,3 +658,197 @@ h4 {
         font-size: 20px;
     }
 }
+/*
+ * ----------------------------------------
+ * 1. Estilos Globales y Reset Básico
+ * ----------------------------------------
+ */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f9; /* Fondo muy claro */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Títulos generales */
+h1 {
+    font-size: 2.2em;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 1.8em;
+    border-bottom: 3px solid #007bff; /* Subrayado azul */
+    padding-bottom: 5px;
+    margin-top: 20px;
+    color: #007bff;
+}
+
+h3 {
+    font-size: 1.5em;
+    color: #28a745; /* Color de acento para cada función */
+    border-left: 5px solid #28a745;
+    padding-left: 10px;
+    margin-top: 30px;
+}
+
+/* Listas sin viñetas por defecto */
+ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+/* Viñeta personalizada */
+ul li::before {
+    content: '→'; 
+    color: #007bff;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    position: absolute;
+    left: 0;
+}
+
+
+/*
+ * ----------------------------------------
+ * 2. Estilos de Diseño Principal (Layout)
+ * ----------------------------------------
+ */
+
+header {
+    background-color: #007bff; /* Azul primario */
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+/*
+ * ----------------------------------------
+ * 3. Estilos Específicos de Contenido
+ * ----------------------------------------
+ */
+
+/* Estilos para la definición y lista de funciones */
+.definicion-so, .funciones-principales {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+/* Estilos para cada artículo (función detallada) */
+.funcion-detalle {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #e9ecef; /* Fondo ligeramente gris */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Estilo para los bloques de ejemplo */
+.ejemplo {
+    background-color: #fff3cd; /* Amarillo claro */
+    color: #856404; /* Texto marrón oscuro */
+    padding: 10px 15px;
+    border-left: 5px solid #ffc107; /* Borde amarillo */
+    border-radius: 4px;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+/* Estilo para los bloques de hardware relacionado */
+.hardware {
+    background-color: #d1ecf1; /* Azul celeste claro */
+    color: #0c5460; /* Texto azul oscuro */
+    padding: 8px 15px;
+    border-left: 5px solid #17a2b8; /* Borde cian */
+    border-radius: 4px;
+    margin-top: 15px;
+    font-size: 0.95em;
+}
+
+/* Estilo para resaltar texto dentro de párrafos o listas */
+strong {
+    color: #c82333; /* Rojo para énfasis */
+    font-weight: bold;
+}
+
+
+/*
+ * ----------------------------------------
+ * 4. Estilos para Cajas de Imagen (NUEVO)
+ * ----------------------------------------
+ */
+
+.caja-imagen {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #e6e6e6; /* Fondo gris para la caja */
+    border: 1px dashed #aaa;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Estilo para ajustar cualquier imagen dentro de la caja */
+.caja-imagen img {
+    max-width: 100%; /* Asegura que la imagen no se desborde */
+    height: auto; /* Mantiene la proporción */
+    display: block; /* Para centrarla mejor si es necesario */
+    margin: 0 auto;
+    border-radius: 4px;
+}
+
+/* Estilo específico para la caja principal */
+.caja-imagen.principal {
+    max-width: 70%;
+    margin: 20px auto 30px auto; /* Centrar y más margen abajo */
+    border-color: #007bff;
+    border-width: 2px;
+}
+
+/* Estilo específico para las cajas ilustrativas pequeñas (flotarán a la derecha) */
+.caja-imagen.ilustracion {
+    max-width: 40%; 
+    float: right; /* La caja flotará a la derecha del texto */
+    margin: 0 0 15px 15px; /* Margen superior, a la derecha, inferior, y a la izquierda para separarse del texto */
+    padding: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Limpiar el flotado después del artículo para evitar problemas de diseño */
+.funcion-detalle::after {
+    content: "";
+    display: table;
+    clear: both;
+}
