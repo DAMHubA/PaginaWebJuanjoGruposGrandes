@@ -7,8 +7,27 @@
     <link rel="stylesheet" href="/css/main.css"> 
 </head>
 <body>
-    <header>
-        <h1>Conceptos Fundamentales de un Sistema Operativo (SO)</h1>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">Reto Web Batch</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link active">Inicio</a></li>
+                        <li><a href="about.html" class="nav-link">El reto</a></li>
+                        <li><a href="service.html" class="nav-link">La web</a></li>
+                        <li><a href="contact.html" class="nav-link">Contacto</a></li>
+                    </ul>
+                </nav>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -16,10 +35,10 @@
             <h2>¿Qué es un Sistema Operativo?</h2>
             
             <div class="caja-imagen principal">
-                <p> <a href="/img/Sistema_Operativos.png">Espacio para la Imagen Principal del SO.</p> </a>
+                <p> <img src="/img/Sistema_Operativos.png" alt="Sistema Operativo"></p> </a>
             </div>
 
-            <p>Un Sistema Operativo (SO) es un conjunto de programas que permite la **interacción entre los usuarios y los dispositivos electrónicos**, gestionando los recursos de hardware y software para garantizar un funcionamiento óptimo del sistema. Es el software que actúa como **intermediario** entre el hardware del dispositivo y las aplicaciones que utilizamos.</p>
+            <p><strong>Un Sistema Operativo (SO)</strong> es un conjunto de programas que permite la **interacción entre los usuarios y los dispositivos electrónicos**, gestionando los recursos de hardware y software para garantizar un funcionamiento óptimo del sistema. Es el software que actúa como **intermediario** entre el hardware del dispositivo y las aplicaciones que utilizamos.</p>
         </section>
 
         <section class="funciones-principales">
@@ -36,7 +55,7 @@
             <h3>📌 Gestión de Procesos</h3>
             
             <div class="caja-imagen ilustracion">
-                <p>Espacio para la Ilustración de Gestión de Procesos (CPU).</p>
+                <p> <img src="/img/gestionCPU.png" alt="Gestion de Procesos"></p>
             </div>
             
             <h4>¿Qué es?</h4>
@@ -58,7 +77,7 @@
             <h3>💾 Gestión de la Memoria</h3>
 
             <div class="caja-imagen ilustracion">
-                <p>Espacio para la Ilustración de Gestión de Memoria (RAM).</p>
+                <p><img src="/img/compactacion_memoria.png" alt="Gestion de Memoria"></p>
             </div>
             
             <h4>¿Qué es?</h4>
@@ -81,7 +100,7 @@
             <h3>📂 Gestión de Almacenamiento</h3>
             
             <div class="caja-imagen ilustracion">
-                <p>Espacio para la Ilustración de Gestión de Almacenamiento (HDD/SSD).</p>
+                <p><img src="/img/HDD-vs-SSD-resumen.jpg" alt=""></p>
             </div>
             
             <h4>¿Qué es?</h4>
@@ -104,7 +123,7 @@
             <h3>⚙️ Gestión de Dispositivos</h3>
             
             <div class="caja-imagen ilustracion">
-                <p>Espacio para la Ilustración de Gestión de Dispositivos (Drivers).</p>
+                <p><img src="/img/captura3.jpg" alt="Gestion drivers"></p>
             </div>
 
             <h4>¿Qué es?</h4>
@@ -119,8 +138,68 @@
         </article>
     </main>
 
-    <footer>
-        <p>Documentación sobre Sistemas Operativos - Fuente: Contenido proporcionado por el usuario.</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <span class="logo-text">Reto Web Batch</span>
+                    </div>
+                    <p class="footer-description">
+                        Tu primer proyecto real del trimestre. Crea, aprende y construye algo que puedas mostrar al
+                        mundo.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook" class="social-link">Facebook</a>
+                        <a href="#" aria-label="Twitter" class="social-link">Twitter</a>
+                        <a href="#" aria-label="LinkedIn" class="social-link">LinkedIn</a>
+                        <a href="#" aria-label="Instagram" class="social-link">Instagram</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Enlaces rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio del proyecto</a></li>
+                        <li><a href="about.html">Qué es el Reto Web Batch</a></li>
+                        <li><a href="service.html">Secciones de la web</a></li>
+                        <li><a href="service.html">Juego y descargas</a></li>
+                        <li><a href="contact.html">Contacto / dudas</a></li>
+                        <li><a href="backlog.html">Backlog del proyecto</a></li>
+                        <li><a href="roles.html">Roles del equipo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Sobre el proyecto</h3>
+                    <ul class="footer-links">
+                        <li><a href="service.html">Web sobre Batch</a></li>
+                        <li><a href="https://progresse.es/">Historia de los sistemas operativos</a></li>
+                        <li><a href="https://progresse.es/">Programa de mantenimiento</a></li>
+                        <li><a href="https://progresse.es/">Juego en Batch</a></li>
+                        <li><a href="#">Reto y certificado</a></li>
+                        <li><a href="backlog.html">MUST del proyecto</a></li>
+                        <li><a href="backlog.html">SHOULD (mejoras)</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Contacto</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://progresse.es/">Profesor responsable</a></li>
+                        <li><a href="#">Centro educativo</a></li>
+                        <li><a href="#">Aula virtual</a></li>
+                        <li><a href="contact.html">Horario de dudas</a></li>
+                        <li><a href="contact.html">Preguntas frecuentes</a></li>
+                        <li><a href="contact.html">Entregas y plazos</a></li>
+                        <li><a href="https://progresse.es/">Recursos técnicos</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Reto Web Batch. Proyecto educativo del 2º trimestre.</p>
+            </div>
+        </div>
     </footer>
+
+    <script src="scripts/main.js"></script>
 </body>
+
 </html>

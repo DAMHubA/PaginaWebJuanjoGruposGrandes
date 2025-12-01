@@ -673,52 +673,43 @@ body {
     line-height: 1.6;
 }
 
-/* Títulos generales */
-h1 {
-    font-size: 2.2em;
-    margin-bottom: 0.5em;
+head{
+
 }
 
-h2 {
-    font-size: 1.8em;
-    border-bottom: 3px solid #007bff; /* Subrayado azul */
-    padding-bottom: 5px;
-    margin-top: 20px;
-    color: #007bff;
-}
+    /* Títulos generales */
+    h1 {
+        font-size: 2.2em;
+        margin-bottom: 0.5em;
+    }
 
-h3 {
-    font-size: 1.5em;
-    color: #28a745; /* Color de acento para cada función */
-    border-left: 5px solid #28a745;
-    padding-left: 10px;
-    margin-top: 30px;
-}
+    h2 {
+        font-size: 1.8em;
+        border-bottom: 3px solid #007bff; /* Subrayado azul */
+        padding-bottom: 5px;
+        margin-top: 20px;
+        color: #007bff;
+    }
 
-/* Listas sin viñetas por defecto */
-ul {
-    list-style: none;
-    padding-left: 20px;
-}
+    h3 {
+        font-size: 1.5em;
+        color: #28a745; /* Color de acento para cada función */
+        border-left: 5px solid #28a745;
+        padding-left: 10px;
+        margin-top: 30px;
+    }
 
-ul li {
-    margin-bottom: 10px;
-    position: relative;
-    padding-left: 25px;
-}
+    /* Listas sin viñetas por defecto */
+    ul {
+        list-style: none;
+        padding-left: 20px;
+    }
 
-/* Viñeta personalizada */
-ul li::before {
-    content: '→'; 
-    color: #007bff;
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
-    position: absolute;
-    left: 0;
-}
-
+    ul li {
+        margin-bottom: 10px;
+        position: relative;
+        padding-left: 25px;
+    }
 
 /*
  * ----------------------------------------
@@ -726,16 +717,10 @@ ul li::before {
  * ----------------------------------------
  */
 
-header {
-    background-color: #007bff; /* Azul primario */
-    color: white;
-    padding: 30px 20px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
+
 
 main {
-    max-width: 900px;
+    max-width: 70%;
     margin: 20px auto;
     padding: 20px;
     background-color: white;
@@ -838,12 +823,20 @@ strong {
 
 /* Estilo específico para las cajas ilustrativas pequeñas (flotarán a la derecha) */
 .caja-imagen.ilustracion {
+    text-align: justify;
     max-width: 40%; 
     float: right; /* La caja flotará a la derecha del texto */
     margin: 0 0 15px 15px; /* Margen superior, a la derecha, inferior, y a la izquierda para separarse del texto */
     padding: 5px;
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.caja-imagen.ilustracion img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 4px;
 }
 
 /* Limpiar el flotado después del artículo para evitar problemas de diseño */
