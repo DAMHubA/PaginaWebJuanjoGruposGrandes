@@ -1,0 +1,28 @@
+Estas son algunas de las modificaciones que vamos a tener que hacer a nuestra página web conjunta, se hará mediante GitHub y cada cambio se guardará siempre y cuando no empeore la página 
+(si un cambio se hace con IA asegurarse de que no va a quitar algo que es necesario para otro archivo influyente en la página web).
+
+
+Pagina de inicio: (index.html)
+-Cambiar el header de la página web (Hacerlo mas estético).
+-Añadir fotos del javascript
+-Modificar la bienvenida de la pág web.
+-Añadir "Lo que incluye este proyecto" mediante explicaciones de Juanjo
+- - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Pagina "El reto":(about.html)
+-Añadir imágenes,cambiar la informacion de la página web. NO TOCAR Metodología Scrum NI Cronograma Proyecto.
+-Revisar el Blocklog (botón de abajo de la pagina web).
+-Modificar el footer (alinear textos, ajustes, etc...).
+- - - --  - -- - - -  -- -  - - - - - - - - - - - -  - - - - - - - - - - - - - 
+Página "La web" (service.html)
+-Añadir imágenes a la página web.
+-Modificar la informacion (ya se hará al ritmo de las clases).
+-Botón de "Conocer Roles".
+- - - --  - -- - - -  -- -  - - - - - - - - - - - -  - - - - - - - - - - - - - 
+Página de "Conocer roles": (roles.html)
+Poner una introducción a la página para saber de que va este apartado.
+Roles: Product Owner | Scrum Master | Development Team.
+Descripcion breve de cada rol
+- - - --  - -- - - -  -- -  - - - - - - - - - - - -  - - - - - - - - - - - - - 
+Página de "Contacto": (contact.html)
+-Cambiar informacion/datos.
+
