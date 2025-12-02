@@ -1,5 +1,6 @@
 Estas son algunas de las modificaciones que vamos a tener que hacer a nuestra página web conjunta, se hará mediante GitHub y cada cambio se guardará siempre y cuando no empeore la página 
 (si un cambio se hace con IA asegurarse de que no va a quitar algo que es necesario para otro archivo influyente en la página web).
+Porfavor, añadir comentarios para saber que es lo que se está modificando.
 
 
 Pagina de inicio: (index.html)

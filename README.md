@@ -149,5 +149,3 @@ Compatible con:
 - Código comentado y bien estructurado
 
 ---
-
-**Creado por MiniMax Agent** - Sitio web educativo completo con diseño moderno y funcionalidades avanzadas.
