@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprende Batch - Reto Web Batch</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">Reto Web Batch</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Inicio</a></li>
+                        <li><a href="about.html" class="nav-link">El reto</a></li>
+                        <li><a href="service.html" class="nav-link">La web</a></li>
+                        <li><a href="contact.html" class="nav-link">Contacto</a></li>
+                    </ul>
+                </nav>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="section"
+        style="margin-top: 80px; padding: 80px 0; background: linear-gradient(135deg, #0F172A 0%, #334155 100%); color: white;">
+        <div class="container">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h1 style="color: white; margin-bottom: 1rem;">Domina la Terminal</h1>
+                <p class="lead" style="color: rgba(255, 255, 255, 0.9);">Curso completo: desde los fundamentos de MS-DOS
+                    hasta la creación de scripts de mantenimiento avanzados.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section" style="background-color: #F8FAFC;">
+        <div class="container">
+
+            <!-- Section 1: Intro to Batch -->
+            <div id="intro-batch">
+                <h2 class="section-title centered">1. Fundamentos de Batch</h2>
+                <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem auto; color: #64748b;">
+                    Aprende los conceptos básicos, variables, control de flujo y gestión de procesos.
+                </p>
+
+                <div class="tutorial-card">
+                    <span class="badge badge-blue">Lección 1.1 - 1.4</span>
+                    <h3>Historia y Contexto: MS-DOS y Windows</h3>
+                    <p>Antes de Windows con ventanas, existía <strong>MS-DOS</strong> (Microsoft Disk Operating System).
+                        Aunque hoy usamos interfaces gráficas, el intérprete de comandos (CMD) sigue siendo una
+                        herramienta poderosa heredada de esa época.</p>
+                    <p>Un archivo Batch (<code>.bat</code>) es un script que ejecuta comandos de MS-DOS secuencialmente,
+                        permitiendo automatizar tareas complejas en Windows.</p>
+                </div>
+
+                <div class="tutorial-card">
+                    <span class="badge badge-blue">Lección 2.4 - 2.6</span>
+                    <h3>Comandos Básicos, Variables e Interacción</h3>
+                    <p>Todo script profesional comienza con <code>@echo off</code> para limpiar la salida visual. Usamos
+                        <code>set /p</code> para interactuar con el usuario.</p>
+
+                    <div class="code-block">
+                        <span class="command">@echo</span> <span class="parameter">off</span>
+                        <span class="command">title</span> <span class="string">Mi Primer Script Interactivo</span>
+                        <span class="command">cls</span>
+
+                        <span class="command">echo</span> <span class="string">=== BIENVENIDO AL SISTEMA ===</span>
+                        <span class="command">echo.</span>
+
+                        <span class="comment">:: Interacción con el usuario (Lección 2.6)</span>
+                        <span class="command">set</span> <span class="parameter">/p</span> <span
+                            class="variable">nombre</span>=<span class="string">Por favor, introduce tu nombre: </span>
+                        <span class="command">echo</span> <span class="string">Hola, %nombre%, preparando el
+                            entorno...</span>
+
+                        <span class="comment">:: Pausa para que el usuario pueda leer</span>
+                        <span class="command">timeout</span> <span class="parameter">/t 3</span>
+                    </div>
+                </div>
+
+                <div class="tutorial-card">
+                    <span class="badge badge-blue">Lección 2.10</span>
+                    <h3>Redirección a Archivos y Systeminfo</h3>
+                    <p>Podemos guardar el resultado de un comando en un archivo de texto usando los operadores de
+                        redirección <code>></code> (sobrescribir) y <code>>></code> (añadir al final).</p>
+
+                    <div class="code-block">
+                        <span class="command">@echo</span> <span class="parameter">off</span>
+                        <span class="command">echo</span> <span class="string">Generando reporte del sistema...</span>
+
+                        <span class="comment">:: Guardar información del sistema en un log</span>
+                        <span class="command">systeminfo</span> > <span class="string">reporte_pc.txt</span>
+
+                        <span class="command">echo</span> <span class="string">Añadiendo fecha y hora al
+                            reporte...</span>
+                        <span class="command">echo</span> <span class="string">Reporte generado el: %date% a las
+                            %time%</span> >> <span class="string">reporte_pc.txt</span>
+                        <span class="command">echo</span> <span class="string">Reporte completado.</span>
+                    </div>
+                </div>
+
+                <div class="tutorial-card">
+                    <span class="badge badge-blue">Lección 2.11</span>
+                    <h3>Control de Procesos: Start y Timeout</h3>
+                    <p>Aprende a lanzar procesos en segundo plano y manejar tiempos de espera.</p>
+                    <ul style="margin: 1rem 0 1rem 1.5rem; color: #4b5563;">
+                        <li><code>timeout /t 10</code>: Espera 10 segundos antes de continuar.</li>
+                        <li><code>start /b</code>: Inicia una aplicación sin abrir una ventana nueva de CMD.</li>
+                    </ul>
+
+                    <div class="code-block">
+                        <span class="command">@echo</span> <span class="parameter">off</span>
+                        <span class="command">echo</span> <span class="string">Iniciando calculadora en segundo
+                            plano...</span>
+                        <span class="command">start</span> <span class="parameter">/b</span> <span
+                            class="string">calc.exe</span>
+
+                        <span class="command">echo</span> <span class="string">Esperando 5 segundos antes de
+                            cerrar...</span>
+                        <span class="command">timeout</span> <span class="parameter">/t 5</span> <span
+                            class="parameter">/nobreak</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 4rem 0;">
+
+            <!-- Section 2: Maintenance Scripts -->
+            <div id="mantenimiento">
+                <h2 class="section-title centered">2. Scripts de Mantenimiento</h2>
+                <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem auto; color: #64748b;">
+                    Automatiza la limpieza, seguridad y reparación de tu sistema Windows.
+                </p>
+
+                <div class="two-column">
+                    <div class="column">
+                        <div class="tutorial-card">
+                            <span class="badge badge-green">Lección 2.7 - Limpieza</span>
+                            <h3>Limpiar Archivos Temporales</h3>
+                            <p>Elimina recursivamente archivos basura para liberar espacio.</p>
+                            <div class="code-block">
+                                <span class="comment">:: Borra archivos en subcarpetas (/s) sin preguntar (/q)</span>
+                                <span class="command">del</span> <span class="parameter">/s /q</span> <span
+                                    class="string">"%temp%\*.*"</span>
+
+                                <span class="comment">:: Intenta borrar carpetas vacías</span>
+                                <span class="command">rd</span> <span class="parameter">/s /q</span> <span
+                                    class="string">"%temp%"</span>
+                                <span class="command">md</span> <span class="string">"%temp%"</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="tutorial-card">
+                            <span class="badge badge-green">Lección 2.8 - Red</span>
+                            <h3>Optimizar Red (Flush DNS)</h3>
+                            <p>Resuelve problemas de conectividad renovando la IP y limpiando el DNS.</p>
+                            <div class="code-block">
+                                <span class="command">ipconfig</span> <span class="parameter">/release</span>
+                                <span class="command">ipconfig</span> <span class="parameter">/flushdns</span>
+                                <span class="command">ipconfig</span> <span class="parameter">/renew</span>
+                                <span class="command">echo</span> <span class="string">Configuración de red
+                                    restablecida.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tutorial-card">
+                    <span class="badge badge-purple">Lección 2.11 - Seguridad</span>
+                    <h3>Seguridad: Escaneo con Windows Defender</h3>
+                    <p>Batch permite invocar herramientas del sistema como el antivirus Windows Defender mediante
+                        <code>MpCmdRun.exe</code>.</p>
+                    <div class="code-block">
+                        <span class="command">@echo</span> <span class="parameter">off</span>
+                        <span class="command">echo</span> <span class="string">Iniciando escaneo rápido de
+                            antivirus...</span>
+
+                        <span class="comment">:: Ejecuta el escáner de Windows Defender</span>
+                        <span class="string">"C:\Program Files\Windows Defender\MpCmdRun.exe"</span> <span
+                            class="parameter">-Scan -ScanType 1</span>
+
+                        <span class="command">if</span> <span class="parameter">%errorlevel%</span> <span
+                            class="parameter">==</span> 0 (
+                        <span class="command">echo</span> <span class="string">Escaneo completado sin amenazas.</span>
+                        ) <span class="command">else</span> (
+                        <span class="command">echo</span> <span class="string">¡ATENCIÓN! Se encontraron amenazas o hubo
+                            un error.</span>
+                        )
+                        <span class="command">pause</span>
+                    </div>
+                </div>
+
+                <div class="tutorial-card">
+                    <span class="badge badge-green">Lección 2.9 y 2.13 - Sistema</span>
+                    <h3>Mantenimiento y Manejo de Errores</h3>
+                    <p>Script avanzado que desfragmenta el disco y verifica si la operación fue exitosa usando
+                        <code>errorlevel</code>.</p>
+                    <div class="code-block">
+                        <span class="command">@echo</span> <span class="parameter">off</span>
+                        <span class="command">title</span> <span class="string">Optimizador de Disco</span>
+                        <span class="command">echo</span> <span class="string">Analizando y desfragmentando C:...</span>
+
+                        <span class="comment">:: Defrag en modo detallado (/V)</span>
+                        <span class="command">defrag</span> <span class="parameter">C: /V</span>
+
+                        <span class="comment">:: Comprobar código de salida (Lección 2.13)</span>
+                        <span class="command">if</span> <span class="parameter">%errorlevel%</span> <span
+                            class="parameter">NEQ</span> 0 (
+                        <span class="command">echo</span> <span class="string">Error: No se pudo completar la
+                            desfragmentación.</span>
+                        <span class="command">echo</span> <span class="string">Asegúrate de ejecutar como
+                            Administrador.</span>
+                        ) <span class="command">else</span> (
+                        <span class="command">echo</span> <span class="string">Mantenimiento finalizado
+                            correctamente.</span>
+                        )
+                        <span class="command">pause</span>
+                    </div>
+                </div>
+
+                <div class="tutorial-card">
+                    <span class="badge badge-green">Lección 2.12 - Backup</span>
+                    <h3>Copia de Seguridad Profesional (XCOPY)</h3>
+                    <p>Respalda documentos a una unidad externa, copiando solo lo nuevo.</p>
+                    <div class="code-block">
+                        <span class="comment">:: /E (subcarpetas) /D (solo nuevos) /C (ignorar errores) /Y (no
+                            preguntar)</span>
+                        <span class="command">xcopy</span> <span class="string">"C:\Usuarios\User\Mis Documentos"</span>
+                        <span class="string">"D:\Backups\Docs"</span> <span class="parameter">/E /D /C /Y /I</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+     <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <span class="logo-text">Reto Web Batch</span>
+                    </div>
+                    <p class="footer-description">
+                        Tu primer proyecto real del trimestre. Crea, aprende y construye algo que puedas mostrar al
+                        mundo.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook" class="social-link">Facebook</a>
+                        <a href="#" aria-label="Twitter" class="social-link">Twitter</a>
+                        <a href="#" aria-label="LinkedIn" class="social-link">LinkedIn</a>
+                        <a href="#" aria-label="Instagram" class="social-link">Instagram</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Enlaces rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio del proyecto</a></li>
+                        <li><a href="about.html">Qué es el Reto Web Batch</a></li>
+                        <li><a href="service.html">Secciones de la web</a></li>
+                        <li><a href="service.html">Juego y descargas</a></li>
+                        <li><a href="contact.html">Contacto / dudas</a></li>
+                        <li><a href="backlog.html">Backlog del proyecto</a></li>
+                        <li><a href="roles.html">Roles del equipo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Sobre el proyecto</h3>
+                    <ul class="footer-links">
+                        <li><a href="service.html">Web sobre Batch</a></li>
+                        <li><a href="https://progresse.es/">Historia de los sistemas operativos</a></li>
+                        <li><a href="https://progresse.es/">Programa de mantenimiento</a></li>
+                        <li><a href="https://progresse.es/">Juego en Batch</a></li>
+                        <li><a href="#">Reto y certificado</a></li>
+                        <li><a href="backlog.html">MUST del proyecto</a></li>
+                        <li><a href="backlog.html">SHOULD (mejoras)</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Contacto</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://progresse.es/">Profesor responsable</a></li>
+                        <li><a href="#">Centro educativo</a></li>
+                        <li><a href="#">Aula virtual</a></li>
+                        <li><a href="contact.html">Horario de dudas</a></li>
+                        <li><a href="contact.html">Preguntas frecuentes</a></li>
+                        <li><a href="contact.html">Entregas y plazos</a></li>
+                        <li><a href="https://progresse.es/">Recursos técnicos</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Reto Web Batch. Proyecto educativo del 2º trimestre.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

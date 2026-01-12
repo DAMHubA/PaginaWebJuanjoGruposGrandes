@@ -471,6 +471,7 @@ h4 {
     text-align: center;
     min-height: 200px;
 }
+
 .image-placeholder img {
     border-radius: 16px;
     max-width: 100%;
@@ -481,6 +482,23 @@ h4 {
 .image-placeholder.small {
     min-height: 120px;
     font-size: 14px;
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+}
+.image-placeholder.small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.image-placeholder.small a, 
+.image-placeholder.small span {
+    width: 100%;
+    height: 100%;
+    display: block;
 }
 
 .image-placeholder.avatar {
@@ -573,18 +591,43 @@ h4 {
     margin-top: 48px;
 }
 
+.image-service {
+    background: linear-gradient(135deg, #E0F2FE 0%, #BAE6FD 100%);
+    border: 2px dashed #1E40AF;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1E40AF;
+    text-align: center;
+    min-height: 200px;
+    overflow: hidden;
+}
+
+.image-service img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-service a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .two-column {
         grid-template-columns: 1fr;
         gap: 48px;
     }
-    
+
     .three-column {
         grid-template-columns: 1fr;
         gap: 24px;
     }
-    
+
     .stats-grid {
         grid-template-columns: 1fr;
     }
@@ -594,44 +637,44 @@ h4 {
     .container {
         padding: 0 16px;
     }
-    
+
     h1 {
         font-size: 40px;
     }
-    
+
     h2 {
         font-size: 32px;
     }
-    
+
     .section {
         padding: 64px 0;
     }
-    
+
     .carousel-container {
         height: 500px;
     }
-    
+
     .carousel-slide {
         padding: 0 16px;
     }
-    
+
     .two-column {
         gap: 32px;
     }
-    
+
     .footer-content {
         grid-template-columns: 1fr;
         gap: 32px;
     }
-    
+
     .nav {
         display: none;
     }
-    
+
     .mobile-menu-toggle {
         display: flex;
     }
-    
+
     .stat-number {
         font-size: 48px;
     }
@@ -641,23 +684,24 @@ h4 {
     h1 {
         font-size: 32px;
     }
-    
+
     .carousel-title {
         font-size: 32px;
     }
-    
+
     .carousel-text {
         font-size: 18px;
     }
-    
+
     .testimonial-card {
         padding: 32px 24px;
     }
-    
+
     .testimonial-quote {
         font-size: 20px;
     }
 }
+
 /*
  * ----------------------------------------
  * 1. Estilos Globales y Reset Básico
@@ -668,44 +712,47 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f7f9; /* Fondo muy claro */
+    background-color: #f4f7f9;
+    /* Fondo muy claro */
     color: #333;
     line-height: 1.6;
 }
 
-    /* Títulos generales */
-    h1 {
-        font-size: 2.2em;
-        margin-bottom: 0.5em;
-    }
+/* Títulos generales */
+h1 {
+    font-size: 2.2em;
+    margin-bottom: 0.5em;
+}
 
-    h2 {
-        font-size: 1.8em;
-        border-bottom: 3px solid #007bff; /* Subrayado azul */
-        padding-bottom: 5px;
-        margin-top: 20px;
-        color: #007bff;
-    }
+h2 {
+    font-size: 1.8em;
+    border-bottom: 3px solid #007bff;
+    /* Subrayado azul */
+    padding-bottom: 5px;
+    margin-top: 20px;
+    color: #007bff;
+}
 
-    h3 {
-        font-size: 1.5em;
-        color: #28a745; /* Color de acento para cada función */
-        border-left: 5px solid #28a745;
-        padding-left: 10px;
-        margin-top: 30px;
-    }
+h3 {
+    font-size: 1.5em;
+    color: #28a745;
+    /* Color de acento para cada función */
+    border-left: 5px solid #28a745;
+    padding-left: 10px;
+    margin-top: 30px;
+}
 
-    /* Listas sin viñetas por defecto */
-    ul {
-        list-style: none;
-        padding-left: 20px;
-    }
+/* Listas sin viñetas por defecto */
+ul {
+    list-style: none;
+    padding-left: 20px;
+}
 
-    ul li {
-        margin-bottom: 10px;
-        position: relative;
-        padding-left: 25px;
-    }
+ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
 
 /*
  * ----------------------------------------
@@ -721,7 +768,7 @@ main {
     padding: 20px;
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
 }
 
 footer {
@@ -740,7 +787,8 @@ footer {
  */
 
 /* Estilos para la definición y lista de funciones */
-.definicion-so, .funciones-principales {
+.definicion-so,
+.funciones-principales {
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -751,17 +799,21 @@ footer {
 .funcion-detalle {
     margin-bottom: 40px;
     padding: 20px;
-    background-color: #e9ecef; /* Fondo ligeramente gris */
+    background-color: #e9ecef;
+    /* Fondo ligeramente gris */
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 /* Estilo para los bloques de ejemplo */
 .ejemplo {
-    background-color: #fff3cd; /* Amarillo claro */
-    color: #856404; /* Texto marrón oscuro */
+    background-color: #fff3cd;
+    /* Amarillo claro */
+    color: #856404;
+    /* Texto marrón oscuro */
     padding: 10px 15px;
-    border-left: 5px solid #ffc107; /* Borde amarillo */
+    border-left: 5px solid #ffc107;
+    /* Borde amarillo */
     border-radius: 4px;
     margin-top: 15px;
     font-style: italic;
@@ -769,10 +821,13 @@ footer {
 
 /* Estilo para los bloques de hardware relacionado */
 .hardware {
-    background-color: #d1ecf1; /* Azul celeste claro */
-    color: #0c5460; /* Texto azul oscuro */
+    background-color: #d1ecf1;
+    /* Azul celeste claro */
+    color: #0c5460;
+    /* Texto azul oscuro */
     padding: 8px 15px;
-    border-left: 5px solid #17a2b8; /* Borde cian */
+    border-left: 5px solid #17a2b8;
+    /* Borde cian */
     border-radius: 4px;
     margin-top: 15px;
     font-size: 0.95em;
@@ -780,7 +835,8 @@ footer {
 
 /* Estilo para resaltar texto dentro de párrafos o listas */
 strong {
-    color: #c82333; /* Rojo para énfasis */
+    color: #c82333;
+    /* Rojo para énfasis */
     font-weight: bold;
 }
 
@@ -794,7 +850,8 @@ strong {
 .caja-imagen {
     margin: 20px 0;
     padding: 10px;
-    background-color: #e6e6e6; /* Fondo gris para la caja */
+    background-color: #e6e6e6;
+    /* Fondo gris para la caja */
     border: 1px dashed #aaa;
     border-radius: 5px;
     text-align: center;
@@ -802,9 +859,12 @@ strong {
 
 /* Estilo para ajustar cualquier imagen dentro de la caja */
 .caja-imagen img {
-    max-width: 100%; /* Asegura que la imagen no se desborde */
-    height: auto; /* Mantiene la proporción */
-    display: block; /* Para centrarla mejor si es necesario */
+    max-width: 100%;
+    /* Asegura que la imagen no se desborde */
+    height: auto;
+    /* Mantiene la proporción */
+    display: block;
+    /* Para centrarla mejor si es necesario */
     margin: 0 auto;
     border-radius: 4px;
 }
@@ -812,7 +872,8 @@ strong {
 /* Estilo específico para la caja principal */
 .caja-imagen.principal {
     max-width: 70%;
-    margin: 20px auto 30px auto; /* Centrar y más margen abajo */
+    margin: 20px auto 30px auto;
+    /* Centrar y más margen abajo */
     border-color: #007bff;
     border-width: 2px;
 }
@@ -820,13 +881,16 @@ strong {
 /* Estilo específico para las cajas ilustrativas pequeñas (flotarán a la derecha) */
 .caja-imagen.ilustracion {
     text-align: justify;
-    max-width: 40%; 
-    float: right; /* La caja flotará a la derecha del texto */
-    margin: 0 0 15px 15px; /* Margen superior, a la derecha, inferior, y a la izquierda para separarse del texto */
+    max-width: 40%;
+    float: right;
+    /* La caja flotará a la derecha del texto */
+    margin: 0 0 15px 15px;
+    /* Margen superior, a la derecha, inferior, y a la izquierda para separarse del texto */
     padding: 5px;
     background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
 .caja-imagen.ilustracion img {
     max-width: 100%;
     height: auto;
@@ -840,4 +904,65 @@ strong {
     content: "";
     display: table;
     clear: both;
+}
+
+/* CSS de la pagina de .bat*/
+.code-block {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    padding: 1rem;
+    border-radius: 8px;
+    font-family: 'Consolas', 'Monaco', monospace;
+    overflow-x: auto;
+    margin: 1rem 0;
+    border: 1px solid #333;
+}
+
+.command {
+    color: #569cd6;
+}
+
+.comment {
+    color: #6a9955;
+}
+
+.parameter {
+    color: #9cdcfe;
+}
+
+.string {
+    color: #ce9178;
+}
+
+.tutorial-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.badge-blue {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.badge-green {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.badge-purple {
+    background-color: #f3e8ff;
+    color: #6b21a8;
 }
