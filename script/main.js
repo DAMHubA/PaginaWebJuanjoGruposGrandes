@@ -356,12 +356,7 @@ function initFormValidation() {
 
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', function () {
-    // Initialize carousel
-    const heroSlides = document.querySelectorAll('.carousel-slide');
-    const heroDots = document.querySelectorAll('.carousel-dots .dot');
-    if (heroSlides.length > 0) {
-        new Carousel(document.querySelector('.hero'), heroSlides, heroDots, 7000);
-    }
+
 
     // Initialize testimonials carousel
     const testimonialSlides = document.querySelectorAll('.testimonial-slide');
