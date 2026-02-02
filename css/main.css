@@ -24,6 +24,7 @@
     --item-bg-hover: #BAE6FD;
 
     --bg-footer: #1E3A8A;
+    --bg-gradient-accent: linear-gradient(135deg, #E0F2FE 0%, #BAE6FD 100%);
 }
 
 [data-theme="dark"] {
@@ -50,6 +51,7 @@
     --item-bg-hover: #334155;
 
     --bg-footer: #1e293b;
+    --bg-gradient-accent: linear-gradient(135deg, #1e293b 0%, #334155 100%);
 }
 
 * {
@@ -314,6 +316,15 @@ h4 {
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: 32px;
+}
+
+.hero-image {
+    max-width: 200px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    margin-bottom: 24px;
+    display: inline-block;
 }
 
 .carousel-dots {

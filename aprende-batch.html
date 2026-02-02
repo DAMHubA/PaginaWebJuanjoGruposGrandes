@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+
 </head>
 
 <body>
@@ -28,6 +28,26 @@
                         <li><a href="contact.html" class="nav-link">Contacto</a></li>
                     </ul>
                 </nav>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar modo oscuro">
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" style="display:none;">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
                 <button class="mobile-menu-toggle" aria-label="Toggle menu">
                     <span></span>
                     <span></span>
@@ -74,7 +94,8 @@
                     <span class="badge badge-blue">Lección 2.4 - 2.6</span>
                     <h3>Comandos Básicos, Variables e Interacción</h3>
                     <p>Todo script profesional comienza con <code>@echo off</code> para limpiar la salida visual. Usamos
-                        <code>set /p</code> para interactuar con el usuario.</p>
+                        <code>set /p</code> para interactuar con el usuario.
+                    </p>
 
                     <div class="code-block">
                         <span class="command">@echo</span> <span class="parameter">off</span>
@@ -188,7 +209,8 @@
                     <span class="badge badge-purple">Lección 2.11 - Seguridad</span>
                     <h3>Seguridad: Escaneo con Windows Defender</h3>
                     <p>Batch permite invocar herramientas del sistema como el antivirus Windows Defender mediante
-                        <code>MpCmdRun.exe</code>.</p>
+                        <code>MpCmdRun.exe</code>.
+                    </p>
                     <div class="code-block">
                         <span class="command">@echo</span> <span class="parameter">off</span>
                         <span class="command">echo</span> <span class="string">Iniciando escaneo rápido de
@@ -213,7 +235,8 @@
                     <span class="badge badge-green">Lección 2.9 y 2.13 - Sistema</span>
                     <h3>Mantenimiento y Manejo de Errores</h3>
                     <p>Script avanzado que desfragmenta el disco y verifica si la operación fue exitosa usando
-                        <code>errorlevel</code>.</p>
+                        <code>errorlevel</code>.
+                    </p>
                     <div class="code-block">
                         <span class="command">@echo</span> <span class="parameter">off</span>
                         <span class="command">title</span> <span class="string">Optimizador de Disco</span>
@@ -253,7 +276,7 @@
         </div>
     </section>
 
-     <!-- Footer -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -315,7 +338,7 @@
         </div>
     </footer>
 
-    <script src="scripts/main.js"></script>
+    <script src="script/main.js"></script>
 </body>
 
 </html>
