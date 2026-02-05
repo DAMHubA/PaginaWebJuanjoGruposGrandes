@@ -18,6 +18,22 @@ class Carousel {
             dot.addEventListener('click', () => this.goToSlide(index));
         });
 
+        // Add button navigation
+        const prevBtn = this.container.querySelector('.carousel-control.prev');
+        const nextBtn = this.container.querySelector('.carousel-control.next');
+
+        if (prevBtn) prevBtn.addEventListener('click', () => {
+            this.prevSlide();
+            this.stopAutoplay(); // Optional: stop autoplay when user interacts
+            this.startAutoplay(); // Restart autoplay timer
+        });
+
+        if (nextBtn) nextBtn.addEventListener('click', () => {
+            this.nextSlide();
+            this.stopAutoplay();
+            this.startAutoplay();
+        });
+
         // Add keyboard navigation
         this.container.addEventListener('keydown', (e) => {
             if (e.key === 'ArrowLeft') this.prevSlide();
@@ -362,7 +378,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const testimonialSlides = document.querySelectorAll('.testimonial-slide');
     const testimonialDots = document.querySelectorAll('.testimonial-dots .dot');
     if (testimonialSlides.length > 0) {
-        new Carousel(document.querySelector('.testimonials-section'), testimonialSlides, testimonialDots, 6000);
+        new Carousel(document.querySelector('.testimonials-section'), testimonialSlides, testimonialDots, 10000);
     }
 
     // Initialize mobile menu
