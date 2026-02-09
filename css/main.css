@@ -614,13 +614,20 @@ h4 {
     font-weight: 500;
     text-align: center;
     min-height: 200px;
+    overflow: hidden;
+    /* Ensure image doesn't bleed */
+}
+
+.image-placeholder a {
+    display: block;
+    width: 100%;
 }
 
 .image-placeholder img {
-    border-radius: 16px;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Remove inline gap */
 }
 
 .image-placeholder.small {
@@ -800,6 +807,7 @@ h4 {
     .container {
         padding: 0 16px;
     }
+
 
     h1 {
         font-size: 40px;
@@ -1127,4 +1135,267 @@ strong {
 .badge-purple {
     background-color: #f3e8ff;
     color: #6b21a8;
+}
+
+/* Page: Juegos BAT */
+.page-juegos-bat {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Main container theming */
+.page-juegos-bat main {
+    background-color: var(--bg-surface);
+    /* Light mode default from root */
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: background-color 0.3s ease;
+}
+
+[data-theme="dark"] .page-juegos-bat main {
+    background-color: #1e293b;
+    /* Dark mode specific */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.page-juegos-bat .code-container {
+    background-color: #1e293b;
+    border-left: 4px solid #3b82f6;
+    color: #cbd5e1;
+    /* Ensure default code text is visible */
+}
+
+.page-juegos-bat .gradient-text {
+    background: linear-gradient(90deg, #60a5fa, #a855f7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Adaptive Card */
+.page-juegos-bat .card {
+    background: var(--bg-surface);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-light);
+    transition: transform 0.2s;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.page-juegos-bat .card:hover {
+    transform: translateY(-5px);
+    border-color: #3b82f6;
+}
+
+/* Light Mode Text Overrides */
+.page-juegos-bat .text-slate-300,
+.page-juegos-bat .text-slate-400,
+.page-juegos-bat .text-slate-500 {
+    color: var(--text-secondary);
+}
+
+.page-juegos-bat .text-blue-300,
+.page-juegos-bat .text-blue-400 {
+    color: var(--primary-color);
+}
+
+.page-juegos-bat .text-red-400 {
+    color: #dc2626;
+}
+
+.page-juegos-bat .text-green-400,
+.page-juegos-bat .text-green-500 {
+    /* Covers icons and logs */
+    color: #16a34a;
+}
+
+/* Light Mode Background Overrides for Utility Classes */
+.page-juegos-bat .bg-slate-800,
+.page-juegos-bat .bg-slate-800\/50 {
+    background-color: #f1f5f9;
+    color: var(--text-main);
+}
+
+.page-juegos-bat .bg-slate-700\/50 {
+    background-color: #e2e8f0;
+    color: var(--text-main);
+}
+
+.page-juegos-bat .bg-black\/40 {
+    background-color: #f3f4f6;
+    border: 1px solid #e5e7eb;
+}
+
+/* Card Text Specifics */
+.page-juegos-bat .card .text-yellow-400 {
+    color: #d97706;
+    /* Darker amber for light mode */
+}
+
+/* Dark Mode Restores */
+[data-theme="dark"] .page-juegos-bat .card {
+    background: rgba(30, 41, 59, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .page-juegos-bat .text-slate-300 {
+    color: #cbd5e1;
+}
+
+[data-theme="dark"] .page-juegos-bat .text-slate-400 {
+    color: #94a3b8;
+}
+
+[data-theme="dark"] .page-juegos-bat .text-slate-500 {
+    color: #64748b;
+}
+
+[data-theme="dark"] .page-juegos-bat .text-blue-300 {
+    color: #93c5fd;
+}
+
+[data-theme="dark"] .page-juegos-bat .text-blue-400 {
+    color: #60a5fa;
+}
+
+[data-theme="dark"] .page-juegos-bat .text-red-400 {
+    color: #f87171;
+}
+
+[data-theme="dark"] .page-juegos-bat .text-green-400 {
+    color: #4ade80;
+}
+
+[data-theme="dark"] .page-juegos-bat .text-green-500 {
+    color: #22c55e;
+}
+
+[data-theme="dark"] .page-juegos-bat .card .text-yellow-400 {
+    color: #facc15;
+}
+
+[data-theme="dark"] .page-juegos-bat .bg-slate-800 {
+    background-color: #1e293b;
+    color: inherit;
+}
+
+[data-theme="dark"] .page-juegos-bat .bg-slate-800\/50 {
+    background-color: rgba(30, 41, 59, 0.5);
+    color: inherit;
+}
+
+[data-theme="dark"] .page-juegos-bat .bg-slate-700\/50 {
+    background-color: rgba(51, 65, 85, 0.5);
+    color: inherit;
+}
+
+[data-theme="dark"] .page-juegos-bat .bg-black\/40 {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: none;
+}
+
+/* 
+ * ----------------------------------------
+ * 5. General Dark Mode Overrides for System & Batch Pages
+ * ----------------------------------------
+ */
+
+/* Utility Classes */
+.text-muted-custom {
+    color: #64748b;
+}
+
+[data-theme="dark"] .text-muted-custom {
+    color: #94a3b8;
+}
+
+.list-custom {
+    margin: 1rem 0 1rem 1.5rem;
+    color: #4b5563;
+}
+
+[data-theme="dark"] .list-custom {
+    color: #cbd5e1;
+}
+
+/* Main Container Theming (applies to sistemas_Operativos.html) */
+[data-theme="dark"] main {
+    background-color: var(--bg-surface);
+    /* Use the themed surface color */
+    color: var(--text-main);
+    border: 1px solid var(--border-light);
+}
+
+/* Tutorial Cards (aprende-batch.html) */
+[data-theme="dark"] .tutorial-card {
+    background-color: #1e293b;
+    border-color: #334155;
+    color: #e2e8f0;
+}
+
+[data-theme="dark"] .tutorial-card h3 {
+    color: #60a5fa;
+    /* Blue title in dark mode */
+}
+
+/* Badges */
+[data-theme="dark"] .badge-blue {
+    background-color: rgba(30, 64, 175, 0.3);
+    color: #93c5fd;
+}
+
+[data-theme="dark"] .badge-green {
+    background-color: rgba(22, 101, 52, 0.3);
+    color: #86efac;
+}
+
+[data-theme="dark"] .badge-purple {
+    background-color: rgba(107, 33, 168, 0.3);
+    color: #d8b4fe;
+}
+
+/* System Pages Components (sistemas_Operativos.html) */
+[data-theme="dark"] .definicion-so,
+[data-theme="dark"] .funciones-principales {
+    border-color: #334155;
+    background-color: #1e293b;
+}
+
+[data-theme="dark"] .funcion-detalle {
+    background-color: #1e293b;
+    color: #e2e8f0;
+    border: 1px solid #334155;
+}
+
+[data-theme="dark"] .ejemplo {
+    background-color: rgba(234, 179, 8, 0.1);
+    /* Transparent yellow */
+    color: #fde047;
+    border-left-color: #ca8a04;
+}
+
+[data-theme="dark"] .hardware {
+    background-color: rgba(6, 182, 212, 0.1);
+    /* Transparent cyan */
+    color: #67e8f9;
+    border-left-color: #0891b2;
+}
+
+[data-theme="dark"] strong {
+    color: #f87171;
+    /* Lighter red */
+}
+
+/* Code Blocks */
+[data-theme="dark"] .code-block {
+    background-color: #0f172a;
+    border-color: #334155;
+}
+
+[data-theme="dark"] h2 {
+    color: #60a5fa;
+    border-bottom-color: #3b82f6;
+}
+
+[data-theme="dark"] h3 {
+    color: #4ade80;
+    border-left-color: #22c55e;
 }

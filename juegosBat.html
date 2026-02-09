@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Juego BAT - Adivina el Número</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="min-h-screen page-juegos-bat">
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">Reto Web Batch</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Inicio</a></li>
+                        <li><a href="about.html" class="nav-link">El reto</a></li>
+                        <li><a href="service.html" class="nav-link">La web</a></li>
+                        <li><a href="roles.html" class="nav-link">Staff</a></li>
+                        <li><a href="contact.html" class="nav-link">Contacto</a></li>
+                    </ul>
+                </nav>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar modo oscuro">
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" style="display:none;">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="w-full p-6 md:p-12 pt-24">
+        <section class="grid md:grid-cols-2 gap-6 mb-16">
+
+
+            <div class="card p-8 rounded-2xl">
+                <h3 class="text-2xl font-bold mb-6 flex items-center">
+                    <i class="fas fa-graduation-cap mr-3 text-purple-500"></i> ¿Qué aprenderás?
+                </h3>
+                <ul class="space-y-4 text-slate-300">
+                    <li class="flex items-start"><i class="fas fa-check-circle mt-1 mr-3 text-green-500"></i> Pedir
+                        datos con <code class="bg-slate-800 px-2 rounded text-blue-300">set /p</code></li>
+                    <li class="flex items-start"><i class="fas fa-check-circle mt-1 mr-3 text-green-500"></i> Cálculos y
+                        uso de <code class="bg-slate-800 px-2 rounded text-blue-300">%random%</code></li>
+                    <li class="flex items-start"><i class="fas fa-check-circle mt-1 mr-3 text-green-500"></i> Bucles con
+                        <code class="bg-slate-800 px-2 rounded text-blue-300">:etiqueta</code> y <code
+                            class="bg-slate-800 px-2 rounded text-blue-300">goto</code>
+                    </li>
+                    <li class="flex items-start"><i class="fas fa-check-circle mt-1 mr-3 text-green-500"></i> Validar
+                        números con <code class="bg-slate-800 px-2 rounded text-blue-300">for /f</code></li>
+                </ul>
+            </div>
+
+            <div class="card p-8 rounded-2xl">
+                <h3 class="text-2xl font-bold mb-6 flex items-center">
+                    <i class="fas fa-tools mr-3 text-blue-500"></i> Preparación (1 min)
+                </h3>
+                <ol class="space-y-4 text-slate-300 list-decimal ml-5">
+                    <li>Abre el Bloc de notas o VS Code.</li>
+                    <li>Crea un archivo llamado <span class="text-yellow-400 font-mono">adivina.bat</span>.
+                    </li>
+                    <li>Copia el código base que verás abajo.</li>
+                    <li>Guarda y haz doble clic para jugar.</li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <div class="flex justify-between items-end mb-4">
+                <h3 class="text-3xl font-bold italic">01. Código Base</h3>
+                <span class="text-xs text-slate-500 uppercase font-mono">adivina.bat</span>
+            </div>
+            <div class="code-container p-6 rounded-xl font-mono text-sm leading-relaxed overflow-x-auto shadow-2xl">
+                <pre class="text-blue-100">
+<span class="text-slate-500">@echo off</span>
+<span class="text-purple-400">title</span> Adivina el numero (BAT)
+<span class="text-purple-400">chcp</span> 65001 >nul <span class="text-slate-500">:: Soporte para tildes</span>
+<span class="text-purple-400">setlocal</span> EnableExtensions EnableDelayedExpansion
+
+<span class="text-green-400">:inicio</span>
+<span class="text-purple-400">cls</span>
+<span class="text-yellow-400">echo</span> ============================
+<span class="text-yellow-400">echo</span> JUEGO: ADIVINA EL NUMERO (1-20)
+<span class="text-yellow-400">echo</span> ============================
+
+<span class="text-slate-500">:: Crear número secreto</span>
+<span class="text-purple-400">set /a</span> objetivo=(%random% %% 20) + 1
+<span class="text-purple-400">set /a</span> intentos=0
+
+<span class="text-green-400">:preguntar</span>
+<span class="text-purple-400">set /p</span> n=Escribe un numero (1-20):
+
+<span class="text-slate-500">:: Validación de entrada</span>
+<span class="text-purple-400">for /f</span> "delims=0123456789" %%A in ("%n%") do (
+    <span class="text-yellow-400">echo</span> Eso no es un numero.
+    <span class="text-purple-400">goto</span> preguntar
+)
+<span class="text-slate-500">... (restante en el PDF)</span>
+</pre>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h3 class="text-3xl font-bold mb-8 text-center">Cómo funciona la lógica</h3>
+            <div class="grid md:grid-cols-3 gap-6 text-center">
+                <div class="p-6">
+                    <div class="text-4xl mb-4 text-blue-500"><i class="fas fa-dice"></i></div>
+                    <h4 class="font-bold mb-2">El Azar</h4>
+                    <p class="text-sm text-slate-400"><code class="text-blue-300">%random%</code> genera un número entre
+                        0 y 32767. Usamos módulo 20 para limitarlo.</p>
+                </div>
+                <div class="p-6 border-x border-white/10">
+                    <div class="text-4xl mb-4 text-purple-500"><i class="fas fa-sync-alt"></i></div>
+                    <h4 class="font-bold mb-2">El Bucle</h4>
+                    <p class="text-sm text-slate-400">La etiqueta <code class="text-blue-300">:preguntar</code> permite
+                        repetir el código hasta acertar.</p>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl mb-4 text-green-500"><i class="fas fa-shield-alt"></i></div>
+                    <h4 class="font-bold mb-2">Validación</h4>
+                    <p class="text-sm text-slate-400">Filtramos letras para que el programa no se cierre
+                        inesperadamente.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="overflow-hidden rounded-xl border border-white/10 mb-16">
+            <table class="w-full text-left bg-slate-800/50">
+                <thead class="bg-slate-700/50 text-blue-400">
+                    <tr>
+                        <th class="p-4">Entrada</th>
+                        <th class="p-4">¿Pasa?</th>
+                        <th class="p-4">Resultado</th>
+                    </tr>
+                </thead>
+                <tbody class="text-slate-300 divide-y divide-white/5">
+                    <tr>
+                        <td class="p-4 font-mono">12</td>
+                        <td class="p-4 text-green-400">Sí</td>
+                        <td class="p-4">Sigue al rango 1-20</td>
+                    </tr>
+                    <tr>
+                        <td class="p-4 font-mono">12a</td>
+                        <td class="p-4 text-red-400">No</td>
+                        <td class="p-4">Error: "Eso no es un número"</td>
+                    </tr>
+                    <tr>
+                        <td class="p-4 font-mono">hola</td>
+                        <td class="p-4 text-red-400">No</td>
+                        <td class="p-4">Muestra aviso y repite</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <section
+            class="bg-gradient-to-br from-blue-900/20 to-purple-900/20 p-8 rounded-3xl border border-blue-500/30 mb-16">
+            <h3 class="text-2xl font-bold mb-4 flex items-center">
+                <i class="fas fa-star mr-3 text-yellow-500"></i> Versión BONUS: CHOICE
+            </h3>
+            <p class="mb-6 text-slate-300">¿Quieres algo más controlado? Usa el comando <code
+                    class="text-blue-300">choice</code> para que el usuario solo pueda pulsar teclas específicas
+                (1-5).</p>
+            <div class="bg-black/40 p-4 rounded-lg font-mono text-xs text-green-400">
+                choice /c 12345 /n /m "Pulsa 1-5: "
+            </div>
+        </section>
+
+        <section class="text-center">
+            <h3 class="text-3xl font-bold mb-8">Desafíos para Clase</h3>
+            <div class="flex flex-wrap justify-center gap-4">
+                <span class="bg-slate-800 border border-white/10 px-4 py-2 rounded-full text-sm italic">Cambia el rango
+                    a 1-50</span>
+                <span class="bg-slate-800 border border-white/10 px-4 py-2 rounded-full text-sm italic">Añade selector
+                    de dificultad</span>
+                <span class="bg-slate-800 border border-white/10 px-4 py-2 rounded-full text-sm italic">Muestra contador
+                    de intentos</span>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <span class="logo-text">Reto Web Batch</span>
+                    </div>
+                    <p class="footer-description">
+                        Tu primer proyecto real del trimestre. Crea, aprende y construye algo que puedas mostrar al
+                        mundo.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook" class="social-link">Facebook</a>
+                        <a href="#" aria-label="Twitter" class="social-link">Twitter</a>
+                        <a href="#" aria-label="LinkedIn" class="social-link">LinkedIn</a>
+                        <a href="#" aria-label="Instagram" class="social-link">Instagram</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Enlaces rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio del proyecto</a></li>
+                        <li><a href="about.html">Qué es el Reto Web Batch</a></li>
+                        <li><a href="service.html">Secciones de la web</a></li>
+                        <li><a href="service.html">Juego y descargas</a></li>
+                        <li><a href="contact.html">Contacto / dudas</a></li>
+                        <li><a href="backlog.html">Backlog del proyecto</a></li>
+                        <li><a href="roles.html">Roles del equipo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Sobre el proyecto</h3>
+                    <ul class="footer-links">
+                        <li><a href="service.html">Web sobre Batch</a></li>
+                        <li><a href="https://progresse.es/">Historia de los sistemas operativos</a></li>
+                        <li><a href="https://progresse.es/">Programa de mantenimiento</a></li>
+                        <li><a href="https://progresse.es/">Juego en Batch</a></li>
+                        <li><a href="#">Reto y certificado</a></li>
+                        <li><a href="backlog.html">MUST del proyecto</a></li>
+                        <li><a href="backlog.html">SHOULD (mejoras)</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Contacto</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://progresse.es/">Profesor responsable</a></li>
+                        <li><a href="#">Centro educativo</a></li>
+                        <li><a href="#">Aula virtual</a></li>
+                        <li><a href="contact.html">Horario de dudas</a></li>
+                        <li><a href="contact.html">Preguntas frecuentes</a></li>
+                        <li><a href="contact.html">Entregas y plazos</a></li>
+                        <li><a href="https://progresse.es/">Recursos técnicos</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Reto Web Batch. Proyecto educativo del 2º trimestre.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script/main.js"></script>
+
+</body>
+
+</html>
