@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aprende Batch - Reto Web Batch</title>
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -277,7 +279,237 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Section 3: Proyecto Guiado -->
+    <section class="section bg-slate-900/50">
+        <div class="container">
+            <h2 class="section-title centered text-3xl font-bold mb-12">3. Proyecto Guiado: Tu Suite de Mantenimiento
+            </h2>
+            <p class="text-center text-slate-400 mb-12 max-w-2xl mx-auto">
+                Vamos a combinar todo lo aprendido para crear una herramienta profesional.
+                Crea un archivo llamado <code class="text-blue-400">MantenimientoV.2.bat</code> y sigue estos pasos.
+            </p>
+
+            <div class="space-y-12">
+                <!-- Paso 1: El Menú -->
+                <div class="step-card bg-slate-800 p-8 rounded-2xl border border-slate-700">
+                    <h3 class="text-2xl font-bold text-blue-400 mb-4">Paso 1: El Menú Principal</h3>
+                    <p class="mb-4 text-slate-300">Un buen script necesita una interfaz clara. Usaremos
+                        <code>cls</code>, <code>echo</code> y <code>set /p</code>.
+                    </p>
+                    <div class="code-block bg-black p-4 rounded-lg font-mono text-sm text-green-400 overflow-x-auto">
+                        @echo off
+                        title Suite de Mantenimiento V.2
+                        :menu
+                        cls
+                        echo =================================
+                        echo CENTRO DE COMANDOS BATCH
+                        echo =================================
+                        echo 1. Limpiar Archivos Temporales
+                        echo 2. Reparar Red (Flush DNS)
+                        echo 3. Escanear Sistema (SFC)
+                        echo 4. Ver Conexiones (Netstat) [EXTRA]
+                        echo 5. Salir
+                        echo =================================
+                        set /p op=Elige una opcion:
+
+                        if "%op%"=="1" goto limpieza
+                        if "%op%"=="2" goto red
+                        if "%op%"=="3" goto scanner
+                        if "%op%"=="4" goto conexiones
+                        if "%op%"=="5" exit
+                        goto menu
+                    </div>
+                </div>
+
+                <!-- Paso 2: Las Funciones -->
+                <div class="step-card bg-slate-800 p-8 rounded-2xl border border-slate-700">
+                    <h3 class="text-2xl font-bold text-purple-400 mb-4">Paso 2: Implementando las Opciones</h3>
+                    <p class="mb-4 text-slate-300">Añade estas etiquetas debajo del menú. Fíjate en el uso de
+                        <code>pause</code> y <code>goto menu</code> para volver.
+                    </p>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-bold text-white mb-2">Opción 1: Limpieza</h4>
+                            <div class="code-block bg-black p-4 rounded-lg font-mono text-xs text-green-400">
+                                :limpieza
+                                cls
+                                echo Limpiando temporales...
+                                del /s /q "%temp%\*.*"
+                                echo Hecho.
+                                pause
+                                goto menu
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white mb-2">Opción 2: Red</h4>
+                            <div class="code-block bg-black p-4 rounded-lg font-mono text-xs text-green-400">
+                                :red
+                                cls
+                                echo Renovando IP y DNS...
+                                ipconfig /flushdns
+                                ipconfig /renew
+                                pause
+                                goto menu
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paso 3: Scanner y Extras -->
+                <div class="step-card bg-slate-800 p-8 rounded-2xl border border-slate-700">
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-4">Paso 3: Sub-scripts y Logs (Extras)</h3>
+                    <p class="mb-4 text-slate-300">Para el escáner, es mejor llamar a otro script o abrirlo aparte para
+                        no bloquear el menú.</p>
+
+                    <div class="mb-6">
+                        <h4 class="font-bold text-white mb-2">Opción 3: Scanner.bat (Externo)</h4>
+                        <p class="text-sm text-slate-400 mb-2">Crea un archivo <code>Scanner.bat</code> separado para
+                            modularidad.</p>
+                        <div class="code-block bg-black p-4 rounded-lg font-mono text-sm text-green-400">
+                            :scanner
+                            cls
+                            echo Lanzando Scanner de Archivos de Sistema...
+                            start "Scanner SFC" cmd /k "sfc /scannow & pause & exit"
+                            goto menu
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold text-white mb-2">Opción 4: Netstat con Logs</h4>
+                        <p class="text-sm text-slate-400 mb-2">Guardamos el resultado en un .txt para analizarlo luego.
+                        </p>
+                        <div class="code-block bg-black p-4 rounded-lg font-mono text-sm text-green-400">
+                            :conexiones
+                            cls
+                            echo Guardando conexiones activas en log_red.txt...
+                            netstat -an > log_red.txt
+                            echo ¡Log generado! Abriendo archivo...
+                            start log_red.txt
+                            pause
+                            goto menu
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center mt-12 pb-12">
+                    <a href="archivos/Mantenimineto.bat" download="Mantenimiento.bat"
+                        class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 flex items-center gap-2">
+                        <i class="fas fa-download"></i>
+                        Descargar Script Completo (Mantenimiento)
+                    </a>
+                </div>
+            </div>
+    </section>
+
+    <!-- Section 4: Extras y Distribución -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title centered text-3xl font-bold mb-12">4. Extras: De Script a Programa Profesional</h2>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Convierte tu .BAT a .EXE</h3>
+                    <p class="text-slate-300 mb-6">Un archivo BAT es útil, pero un EXE es más profesional. Usando
+                        herramientas como <strong>"Bat To Exe Converter"</strong> puedes:</p>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center text-slate-300"><i class="fas fa-check text-green-500 mr-2"></i>
+                            Ponerle tu propio icono.</li>
+                        <li class="flex items-center text-slate-300"><i class="fas fa-check text-green-500 mr-2"></i>
+                            Ocultar el código fuente.</li>
+                        <li class="flex items-center text-slate-300"><i class="fas fa-check text-green-500 mr-2"></i>
+                            Forzar ejecución como Administrador.</li>
+                    </ul>
+                    <div class="bg-blue-600/20 border border-blue-500/50 p-4 rounded-lg">
+                        <p class="text-sm text-blue-300"><strong>Tip:</strong> Al compilar, marca la opción "Solicitar
+                            privilegios de Administrador" (Manifest) para que los comandos de sistema funcionen sin
+                            problemas.</p>
+                    </div>
+                </div>
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 text-center">
+                    <img src="/img/convertidor.png" alt="">
+                    <div class="mt-4 p-2 bg-black rounded font-mono text-xs text-green-400 text-left">
+                        Input: MantenimientoV2.bat<br>
+                        Output: MantenimientoV2.exe<br>
+                        Icon: repair.ico<br>
+                        Architecture: 64 Bit
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Evaluación -->
+    <section class="section bg-gradient-to-br from-indigo-900 to-slate-900">
+        <div class="container">
+            <h2 class="section-title centered text-3xl font-bold mb-12">5. Evaluación: ¿Cuánto has aprendido?</h2>
+
+            <div class="max-w-2xl mx-auto bg-slate-800 p-8 rounded-2xl shadow-xl" id="quiz-container">
+                <div class="mb-6">
+                    <p class="text-lg font-bold text-white mb-2">1. ¿Qué comando se usa para limpiar la pantalla?</p>
+                    <div class="space-y-2">
+                        <button onclick="checkAnswer(this, true)"
+                            class="w-full text-left p-3 rounded bg-slate-700 hover:bg-slate-600 transition">A)
+                            cls</button>
+                        <button onclick="checkAnswer(this, false)"
+                            class="w-full text-left p-3 rounded bg-slate-700 hover:bg-slate-600 transition">B)
+                            clear</button>
+                        <button onclick="checkAnswer(this, false)"
+                            class="w-full text-left p-3 rounded bg-slate-700 hover:bg-slate-600 transition">C)
+                            clean</button>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <p class="text-lg font-bold text-white mb-2">2. ¿Cómo pides un dato al usuario?</p>
+                    <div class="space-y-2">
+                        <button onclick="checkAnswer(this, false)"
+                            class="w-full text-left p-3 rounded bg-slate-700 hover:bg-slate-600 transition">A) input
+                            variable</button>
+                        <button onclick="checkAnswer(this, true)"
+                            class="w-full text-left p-3 rounded bg-slate-700 hover:bg-slate-600 transition">B) set /p
+                            variable=</button>
+                        <button onclick="checkAnswer(this, false)"
+                            class="w-full text-left p-3 rounded bg-slate-700 hover:bg-slate-600 transition">C) read
+                            variable</button>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <p class="text-lg font-bold text-white mb-2">3. ¿Qué comando usas para buscar errores en archivos de
+                        sistema?</p>
+                    <div class="space-y-2">
+                        <button onclick="checkAnswer(this, false)"
+                            class="w-full text-left p-3 rounded bg-slate-700 hover:bg-slate-600 transition">A)
+                            chkdsk</button>
+                        <button onclick="checkAnswer(this, false)"
+                            class="w-full text-left p-3 rounded bg-slate-700 hover:bg-slate-600 transition">B)
+                            fixboot</button>
+                        <button onclick="checkAnswer(this, true)"
+                            class="w-full text-left p-3 rounded bg-slate-700 hover:bg-slate-600 transition">C) sfc
+                            /scannow</button>
+                    </div>
+                </div>
+
+                <div id="quiz-result"
+                    class="hidden mt-6 p-4 rounded-lg bg-green-900/50 text-green-300 text-center font-bold">
+                    ¡Has completado el test!
+                </div>
+            </div>
+
+            <script>
+                function checkAnswer(btn, isCorrect) {
+                    if (isCorrect) {
+                        btn.classList.remove('bg-slate-700', 'hover:bg-slate-600');
+                        btn.classList.add('bg-green-600');
+                        // Optional: Disable siblings
+                    } else {
+                        btn.classList.remove('bg-slate-700', 'hover:bg-slate-600');
+                        btn.classList.add('bg-red-600');
+                    }
+                }
+            </script>
+        </div>
+    </section>
     <footer class="footer">
         <div class="container">
             <div class="footer-content">

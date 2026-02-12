@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Sistema Operativo y sus Funciones</title>
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
@@ -53,7 +55,47 @@
         </div>
     </header>
 
-    <main>
+    <main class="pt-28 container mx-auto px-4">
+        <section class="historia-so mb-16">
+            <h2
+                class="text-3xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+                Historia de los Sistemas Operativos</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div
+                    class="card p-6 rounded-xl bg-slate-800/50 border border-slate-700 hover:border-blue-500 transition-colors">
+                    <h3 class="text-xl font-bold mb-3 text-blue-400">Generación 0 (Mecánica)</h3>
+                    <p class="text-slate-300">Antes de 1940. No existían los SO. Las máquinas como la de Babbage se
+                        programaban físicamente con engranajes y tarjetas perforadas.</p>
+                </div>
+                <div
+                    class="card p-6 rounded-xl bg-slate-800/50 border border-slate-700 hover:border-blue-500 transition-colors">
+                    <h3 class="text-xl font-bold mb-3 text-blue-400">1ª Gen (1945-55): Válvulas y Batch</h3>
+                    <p class="text-slate-300">Eniac, Colossus. Programación en lenguaje máquina. Nace el concepto de
+                        <strong>Procesamiento por Lotes (Batch)</strong> para agrupar tareas.
+                    </p>
+                </div>
+                <div
+                    class="card p-6 rounded-xl bg-slate-800/50 border border-slate-700 hover:border-blue-500 transition-colors">
+                    <h3 class="text-xl font-bold mb-3 text-blue-400">2ª Gen (1955-65): Transistores</h3>
+                    <p class="text-slate-300">Ordenadores más pequeños y fiables. Primeros lenguajes de alto nivel
+                        (Fortran). Los SO empiezan a gestionar tareas básicas.</p>
+                </div>
+                <div
+                    class="card p-6 rounded-xl bg-slate-800/50 border border-slate-700 hover:border-blue-500 transition-colors">
+                    <h3 class="text-xl font-bold mb-3 text-blue-400">3ª Gen (1965-80): Circuitos Integrados</h3>
+                    <p class="text-slate-300">Multiprogramación y tiempo compartido. Nace UNIX. Los sistemas pueden
+                        ejecutar varias tareas "a la vez".</p>
+                </div>
+                <div
+                    class="card p-6 rounded-xl bg-slate-800/50 border border-slate-700 hover:border-blue-500 transition-colors col-span-2">
+                    <h3 class="text-xl font-bold mb-3 text-blue-400">4ª Gen (1980-Actualidad): PC y GUI</h3>
+                    <p class="text-slate-300">Nace el Personal Computer (PC). MS-DOS populariza el uso personal. Luego
+                        llegan Windows y Mac OS con Interfaz Gráfica (GUI), haciendo la informática accesible para
+                        todos.</p>
+                </div>
+            </div>
+        </section>
+
         <section class="definicion-so">
             <h2>¿Qué es un Sistema Operativo?</h2>
 
