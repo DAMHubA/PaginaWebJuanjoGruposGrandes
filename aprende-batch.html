@@ -26,7 +26,7 @@
                     <ul class="nav-list">
                         <li><a href="index.html" class="nav-link">Inicio</a></li>
                         <li><a href="about.html" class="nav-link">El reto</a></li>
-                        <li><a href="service.html" class="nav-link">La web</a></li>
+                        <li><a href="service.html" class="nav-link active">La web</a></li>
                         <li><a href="roles.html" class="nav-link">Staff</a></li>
                         <li><a href="contact.html" class="nav-link">Contacto</a></li>
                     </ul>
@@ -391,7 +391,33 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex justify-center mt-12 pb-12">
+                <div class="flex flex-col items-center mt-12 pb-12">
+                    <!-- Mockup CMD -->
+                    <div
+                        class="w-full max-w-2xl mb-8 rounded-lg overflow-hidden shadow-2xl border border-gray-700 bg-gray-900">
+                        <div class="bg-gray-800 px-4 py-2 flex items-center gap-2 border-b border-gray-700">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            <span class="text-xs text-gray-400 ml-2 font-mono">Simbolo del sistema -
+                                Mantenimiento.bat</span>
+                        </div>
+                        <div class="p-6 font-mono text-sm">
+                            <div class="text-green-500">
+                                =================================<br>
+                                CENTRO DE COMANDOS BATCH<br>
+                                =================================<br>
+                                1. Limpiar Archivos Temporales<br>
+                                2. Reparar Red (Flush DNS)<br>
+                                3. Escanear Sistema (SFC)<br>
+                                4. Ver Conexiones (Netstat) [EXTRA]<br>
+                                5. Salir<br>
+                                =================================<br>
+                                Elige una opcion: _
+                            </div>
+                        </div>
+                    </div>
+
                     <a href="archivos/Mantenimiento.bat" download="Mantenimiento.bat"
                         class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 flex items-center gap-2">
                         <i class="fas fa-download"></i>
@@ -497,14 +523,99 @@
             </div>
 
             <script>
+                let correctAnswers = 0;
+                const totalQuestions = 3;
+                const resultDiv = document.getElementById('quiz-result');
+
                 function checkAnswer(btn, isCorrect) {
+                    // Prevent changing answer if already selected in this group (parent div)
+                    const parent = btn.parentElement;
+                    const buttons = parent.querySelectorAll('button');
+
+                    // Check if any button in this group is already clicked (has bg-green... or bg-red...)
+                    let alreadyAnswered = false;
+                    buttons.forEach(b => {
+                        if (b.classList.contains('bg-green-600') || b.classList.contains('bg-red-600')) {
+                            alreadyAnswered = true;
+                        }
+                    });
+
+                    if (alreadyAnswered) return;
+
                     if (isCorrect) {
                         btn.classList.remove('bg-slate-700', 'hover:bg-slate-600');
                         btn.classList.add('bg-green-600');
-                        // Optional: Disable siblings
+                        correctAnswers++;
                     } else {
                         btn.classList.remove('bg-slate-700', 'hover:bg-slate-600');
                         btn.classList.add('bg-red-600');
+                    }
+
+                    // Disable all buttons in the group
+                    buttons.forEach(b => {
+                        b.disabled = true;
+                        if (!b.classList.contains('bg-green-600') && !b.classList.contains('bg-red-600')) {
+                            b.classList.add('opacity-50', 'cursor-not-allowed');
+                        }
+                    });
+
+                    checkCompletion();
+                }
+
+                function checkCompletion() {
+                    // Count how many groups have an answered button
+                    const groups = document.querySelectorAll('.space-y-2');
+                    let answeredCount = 0;
+                    groups.forEach(g => {
+                        if (g.querySelector('.bg-green-600') || g.querySelector('.bg-red-600')) {
+                            answeredCount++;
+                        }
+                    });
+
+                    if (answeredCount === totalQuestions) {
+                        resultDiv.classList.remove('hidden');
+                        if (correctAnswers === totalQuestions) {
+                            resultDiv.innerHTML = `
+                                <div class="text-center">
+                                    <h3 class="text-2xl text-green-400 font-bold mb-4">¡Felicidades, Administrador de Sistemas!</h3>
+                                    <p class="text-white mb-6">Has demostrado tus conocimientos en Batch.</p>
+                                    <div class="bg-white p-8 rounded-lg shadow-xl inline-block text-black max-w-md w-full relative overflow-hidden border-4 border-yellow-500">
+                                        <div class="absolute top-0 left-0 w-full h-4 bg-yellow-500"></div>
+                                        <div class="absolute bottom-0 left-0 w-full h-4 bg-yellow-500"></div>
+                                        <div class="text-3xl font-serif font-bold mb-2">DIPLOMA</div>
+                                        <div class="text-sm uppercase tracking-widest mb-6 text-gray-500">Al Mérito Tecnológico</div>
+                                        <p class="mb-2">Se otorga el presente reconocimiento a</p>
+                                        <p class="text-xl font-bold border-b-2 border-black inline-block px-8 py-1 mb-4">Visitante Web</p>
+                                        <p class="text-sm">Por completar con éxito el módulo de</p>
+                                        <p class="font-bold text-lg mb-8">PROGRAMACIÓN BATCH</p>
+                                        <div class="flex justify-between items-end text-xs">
+                                            <div class="text-center">
+                                                <div class="w-24 border-t border-black mx-auto pt-1">Firma</div>
+                                            </div>
+                                            <div class="w-16 h-16 rounded-full border-2 border-yellow-600 flex items-center justify-center text-yellow-600 font-bold">
+                                                SELLO
+                                            </div>
+                                            <div class="text-center">
+                                                <div class="w-24 border-t border-black mx-auto pt-1">Fecha</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-6">
+                                        <button onclick="window.print()" class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-6 rounded-full transition">
+                                            <i class="fas fa-print mr-2"></i> Imprimir Diploma
+                                        </button>
+                                    </div>
+                                </div>
+                            `;
+                            resultDiv.className = "mt-8 p-8 rounded-xl bg-slate-800 border border-green-500/30";
+                        } else {
+                            resultDiv.innerHTML = `
+                                <p class="text-xl text-yellow-400 mb-2">Has acertado ${correctAnswers} de ${totalQuestions}</p>
+                                <p class="text-slate-300">Repasa los contenidos e inténtalo de nuevo para conseguir el diploma.</p>
+                                <button onclick="location.reload()" class="mt-4 px-4 py-2 bg-slate-700 hover:bg-slate-600 rounded text-white text-sm">Reiniciar Test</button>
+                            `;
+                            resultDiv.className = "mt-6 p-6 rounded-lg bg-yellow-900/20 border border-yellow-500/30 text-center";
+                        }
                     }
                 }
             </script>
@@ -544,9 +655,9 @@
                     <h3 class="footer-title">Sobre el proyecto</h3>
                     <ul class="footer-links">
                         <li><a href="service.html">Web sobre Batch</a></li>
-                        <li><a href="https://progresse.es/">Historia de los sistemas operativos</a></li>
-                        <li><a href="https://progresse.es/">Programa de mantenimiento</a></li>
-                        <li><a href="https://progresse.es/">Juego en Batch</a></li>
+                        <li><a href="sistemas_Operativos.html">Historia de los sistemas operativos</a></li>
+                        <li><a href="aprende-batch.html">Programa de mantenimiento</a></li>
+                        <li><a href="juegosBat.html">Juego en Batch</a></li>
                         <li><a href="#">Reto y certificado</a></li>
                         <li><a href="backlog.html">MUST del proyecto</a></li>
                         <li><a href="backlog.html">SHOULD (mejoras)</a></li>
