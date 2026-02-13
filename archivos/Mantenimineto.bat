@@ -50,9 +50,11 @@ echo 5. Buscar y eliminar malware
 echo 6. Vaciar la papelera de reciclaje 🗑️
 echo 7. Copia de seguridad
 echo 8. Reparacion de Disco
-echo 9. Salir
+echo 9. Inspección de Red (Netstat) 🌐
+echo 10. Reparar imagen del sistema (DISM) 🛠️
+echo 11. Salir
 echo =================================
-set /p opcion="Selecciona una opción (1-9): "
+set /p opcion="Selecciona una opción (1-11): "
 
 ::Funciones Menu
 if "%opcion%"=="1" goto limpiar_temporales
@@ -63,7 +65,9 @@ if "%opcion%"=="5" goto buscar_malware
 if "%opcion%"=="6" goto vaciar_papelera
 if "%opcion%"=="7" goto copia_seguridad
 if "%opcion%"=="8" goto reparar_disco
-if "%opcion%"=="9" goto salir
+if "%opcion%"=="9" goto analizar_red
+if "%opcion%"=="10" goto reparar_sistema
+if "%opcion%"=="11" goto salir
 
 ::Limpiar Temporales
 
