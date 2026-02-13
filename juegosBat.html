@@ -123,12 +123,32 @@
     <span class="text-yellow-400">echo</span> Eso no es un numero.
     <span class="text-purple-400">goto</span> preguntar
 )
-<span class="text-slate-500">... (restante en el PDF)</span>
+<span class="text-slate-500">:: Lógica del juego</span>
+<span class="text-purple-400">set /a</span> intentos+=1
+
+<span class="text-slate-500">:: Comprobar acierto</span>
+<span class="text-purple-400">if</span> %n% equ %objetivo% (
+    <span class="text-purple-400">goto</span> ganaste
+)
+
+<span class="text-slate-500">:: Dar pistas</span>
+<span class="text-purple-400">if</span> %n% lss %objetivo% (
+    <span class="text-yellow-400">echo</span> El numero es MAYOR.
+) <span class="text-purple-400">else</span> (
+    <span class="text-yellow-400">echo</span> El numero es MENOR.
+)
+<span class="text-purple-400">goto</span> preguntar
+
+<span class="text-green-400">:ganaste</span>
+<span class="text-yellow-400">echo</span>.
+<span class="text-yellow-400">echo</span> FELICIDADES! Has adivinado el %objetivo% en %intentos% intentos.
+<span class="text-purple-400">pause</span>
+<span class="text-purple-400">goto</span> inicio
 </pre>
             </div>
         </section>
-          
-        
+
+
         <section class="mb-16">
             <h3 class="text-3xl font-bold mb-8 text-center">Cómo funciona la lógica</h3>
             <div class="grid md:grid-cols-3 gap-6 text-center">
